@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>D' Breeze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="#"><img src="images/dbreezelogo.jpg.png" alt="logo"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="#" class="active">ABOUT US</a></li>
+                    <li><a href="#">DISH LIST</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+
+                    <div class="xContainer"></div>
+                    <div class="socialIcons">
+                        <a href=""><i class="fa-brands fa-facebook"></i>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </span>
+
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="image">
+            <img src="Images/breeze1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="Images/breeze5.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="Images/breeze3.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="Images/breeze4.jpg" alt="">
+        </div>
+        <div class="button">
+            <a onclick="nextimg(-1)" class="prev">❮</a>
+            <a onclick="nextimg(1)" class="next">❯</a>
+        </div>
+        <div class="know-button"><button><a href="#" class="knowus">KNOW US</a></button></div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <script>
+
+        var imageno = 1;
+        displayimg(imageno);
+
+        function nextimg(n) {
+            displayimg(imageno += n)
+        }
+
+        function currentSlide(n) {
+            displayimg(imageno = n)
+        }
+
+        function displayimg(n) {
+            var i;
+            var image = document.getElementsByClassName("image");
+            var dots = document.getElementsByClassName("dot");
+
+            if (n > image.length) {
+                imageno = 1;
+            }
+
+            if (n < 1) {
+                imageno = image.length;
+            }
+
+            for (i = 0; i < image.length; i++) {
+                image[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            image[imageno - 1].style.display = "block";
+            dots[imageno - 1].className += " active";
+
+        }
+
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $(".toggle").on("click", function () {
+                if ($(".menu").hasClass("active")) {
+                    $(".menu").removeClass("active");
+                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                } else {
+                    $(".menu").addClass("active");
+                    $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+                }
+            })
+        });
+
+    </script>
+    <section>
+
+
+
+
+
+
+    </section>
+    <section class="footer">
+       
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#" class="active">Privacy note</a>
+            </li>
+            <li>
+                <a href="#" class="active">Terms of Use</a>
+            </li>
+        </ul>   
+
+
+        <p class="copyright">
+            ©2024 D'breeze Restaurant. All right Reserved.
+        </p>
+
+
+    </section>
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
