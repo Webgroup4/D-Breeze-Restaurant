@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishlist</title>
+    <link rel="stylesheet" href="gallery.css">
+
+
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>D' Breeze</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  
+</head>
+
+
+
+
+    <header>
+        <nav>
+            
+            <ul class="nav-bar">
+                <li class="logo"><a href="index.html"><img src="images/dbreezelogo.jpg.png" alt="logo"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="#" class="active">ABOUT US</a></li>
+                    <li><a href="dishlist.html">DISH LIST</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+
+                    <div class="xContainer">
+                     
+                    <div class="socialIcons">
+                        <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fa-brands fa-facebook"></i>
+                            <a href="https://www.messenger.com/t/100242331399704"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    </div>
+                </span>
+               
+
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+
+            </ul>
+        </nav>
+        <hr class="header-line">
+
+
+
+
+        <h1>Gallery</h1>
+        <p>Explore our delicious offerings and beautiful ambiance.</p>
+    </header>
+    <main>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze4.jpg" alt="Dish 2" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze5.jpg" alt="Dish 3" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+
+
+
+
+    <section class="footer">
+       
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
+            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#" class="active">Privacy note</a>
+            </li>
+            <li>
+                <a href="#" class="active">Terms of Use</a>
+            </li>
+        </ul>   
+      
+      
+        <p class="copyright">
+            ©2024 D'breeze Restaurant. All right Reserved.
+        </p>
+      
+      
+      </section>
+      <script src="app.js"></script>
+      </body>
+      </html>
+
+    <script src="app.js"></script>
+</body>
+</html>
