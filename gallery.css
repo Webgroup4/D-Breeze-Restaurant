@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -14,8 +12,28 @@
 
 
 body {
-    font-family: "Poppins" sans-serif;
+    font-family: 'Asul', sans-serif;
+    /* Changed to Asul */
     background-color: yellow;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    /* Make header fixed */
+    top: 0;
+    /* Position it at the top */
+    left: 0;
+    /* Align to the left */
+    width: 100%;
+    /* Full width */
+    background-color: yellow;
+    /* Background color */
+    z-index: 1000;
+    /* Ensure it stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Optional: Add shadow for depth */
 }
 
 .xContainer {
@@ -138,7 +156,7 @@ body {
 
 
 .socialIcons {
-    display:none;
+    display: none;
 }
 
 
@@ -179,152 +197,291 @@ body {
 
 
 
-header {
+
+
+
+
+
+
+h2,
+h3,
+h4 {
+    font-family: 'Lobster', cursive;
+    color: #3c3c3c;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #555;
+}
+
+img {
+    border-radius: 10px;
+}
+
+
+/* Full Image Section */
+.full-image-section {
+    position: relative;
     text-align: center;
-    background-color: #ffeb3b; /* Yellow background */
-    color: #ff9800; /* Darker yellow for text */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 50px;
 }
 
-
-.header-line {
-    border: none; /* Remove default styles */
-    height: 1px; /* Height of the line */
-    background-color: #ff9800; /* Color of the line */
-    margin: 0; /* Remove default margins */
-}
-
-
-
-header h1 {
-    font-size: 2.5em; /* Larger font for the header */
-    margin: 0;
-    text-transform: uppercase; /* Uppercase for emphasis */
-    letter-spacing: 2px; /* Spacing between letters */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Shadow for header text */
-}
-
-header p {
-    font-size: 1.2em; /* Larger font for the paragraph */
-    margin-top: 10px;
-    color: #555; /* Darker gray for the text */
-    font-style: italic; /* Italic style */
-}
-
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
-
-.gallery-item {
-    margin: 15px;
+.image-container {
+    position: relative;
+    /* Position relative for absolute child */
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    /* Ensure no content spills out */
 }
 
-.gallery-item img {
-    width: 300px; /* Set a fixed width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Smooth scaling */
+.full-image {
+    width: 100%;
+    height: auto;
+    max-width: 1900px;
+    max-height: 100vh;
+    object-fit: cover;
+    filter: blur(4px);
+    transform: scale(1.05);
+    /* Slight zoom to avoid empty edges due to blur */
+    margin: 0 auto;
+    /* Center the image horizontally */
 }
 
-.gallery-item:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1); /* Slightly zoom image on hover */
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.9); /* Black with transparency */
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%; /* Image width */
-    height: auto; /* Maintain aspect ratio */
-    border: 5px solid #ffeb3b; /* Yellow border around modal image */
-}
-
-.close {
+.image-description {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    /* White text */
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    z-index: 1;
+    /* Ensure it stays above the blurred image */
 }
 
-.close:hover,
-.close:focus {
-    color: #ff9800; /* Change color on hover */
+.image-description h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    /* Space below heading */
+    color: white;
 }
 
-.caption {
-    color: #fff; /* Caption color */
+.image-description p {
+    font-size: 1.2rem;
+    /* Paragraph size */
+    line-height: 1.6;
+    color: white;
+}
+
+
+
+
+
+/* Typography */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Best Seller Section */
+.best-seller {
+    background: linear-gradient(135deg, #ffe57f, #ffcc80);
+    /* Lighter yellow gradient */
+    padding: 50px 20px;
     text-align: center;
-    margin-top: 10px; /* Space above caption */
-    font-size: 18px; /* Font size for caption */
-    font-style: italic; /* Italic for caption */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow for caption text */
+    border-radius: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .gallery-item img {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
-    }
+.best-seller-images {
+    display: flex;
+    justify-content: space-around;
+    /* Center images */
+    margin-top: 20px;
+}
 
-    .modal-content {
-        width: 90%; /* Slightly larger modal image on small screens */
-    }
+.image-item {
+    width: 25%;
+    /* Smaller images */
+    transition: transform 0.3s ease;
+}
 
-    header h1 {
-        font-size: 2em; /* Smaller font for header on small screens */
-    }
+.image-item img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    header p {
-        font-size: 1em; /* Smaller font for paragraph on small screens */
-    }
+.image-item:hover {
+    transform: scale(1.05);
+}
+
+/* Featured Dishes */
+.featured-dishes {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    /* Yellow and peach gradient */
+    border-radius: 20px;
+    margin: 50px 0;
+}
+
+.dish {
+    text-align: center;
+    width: 25%;
+    /* Smaller images */
+    transition: transform 0.3s ease;
+}
+
+.dish img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dish:hover {
+    transform: scale(1.05);
+}
+
+/* Soup and Beverages Section */
+.soup-beverages-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff9c4, #ffe082);
+    /* Light yellow gradient */
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.soup-beverages-section img {
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.soup-info {
+    margin-left: 30px;
+    text-align: left;
+}
+
+/* Button styles with arrows */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: orangered;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn i {
+    margin-left: 5px;
+}
+
+.btn:hover {
+    background-color: #d35400;
+    /* Darken on hover */
 }
 
 
+/* Featured Sandwiches and Pasta Section */
+.featured-sandwiches-pasta {
+    background: linear-gradient(135deg, #fffde7, #ffecb3);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.featured-sandwiches-pasta h3 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.dish-list {
+    display: flex;
+    justify-content: space-around;
+    /* Center dishes */
+}
+
+.dish-item {
+    text-align: center;
+    width: 25%;
+    /* Smaller images */
+    transition: transform 0.3s ease;
+}
+
+.dish-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dish-item:hover {
+    transform: scale(1.05);
+}
 
 
+/* Video Section */
+.video-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
 
 
-
-/*  footer */
 
 .footer {
     padding: 5px 0;
     background-color: yellow;
 }
 
-.footer .social{
+.footer .social {
     text-align: center;
     padding-bottom: 10px;
 }
 
-.footer .social::before{
+.footer .social::before {
     content: "";
     display: inline-block;
     width: 590px;
@@ -332,9 +489,10 @@ header p {
     position: absolute;
     background: #000;
     left: 3%;
-    top: 132%;
+    top: 85%;
 }
-.footer .social::after{
+
+.footer .social::after {
     content: "";
     display: inline-block;
     width: 600px;
@@ -342,21 +500,23 @@ header p {
     position: absolute;
     background: #000;
     left: 58%;
-    top: 132%;
+    top: 85%;
 }
+
 @media(max-width: 1500px) {
-    .footer .social::before{
+    .footer .social::before {
         display: none;
         width: 650px;
-        
+
     }
-    
+
 }
+
 @media(max-width: 1500px) {
-    .footer .social::after{
+    .footer .social::after {
         display: none;
     }
-    
+
 }
 
 
@@ -407,4 +567,40 @@ header p {
     text-align: center;
 }
 
+/* Social Lines Section */
+.social-lines-section {
+    margin-top: 30px;
+    /* Add space between image and lines */
+    text-align: center;
+}
 
+.social-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.line {
+    width: 600px;
+    height: 2px;
+    background-color: #000;
+    /* Change the color to match your design */
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.social-icons a:hover {
+    opacity: 0.9;
+}

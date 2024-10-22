@@ -1,147 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dishlist</title>
+    <title>D' Breeze Gallery</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
-    <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>D' Breeze</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      
-          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  
+    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;600&family=Lobster&display=swap"
+        rel="stylesheet">
 </head>
 
-
-
+<body>
 
     <header>
         <nav>
-            
             <ul class="nav-bar">
                 <li class="logo"><a href="index.html"><img src="images/dbreezelogo.jpg.png" alt="logo"></a></li>
                 <input type="checkbox" id="check">
                 <span class="menu">
-                    <li><a href="#" class="active">ABOUT US</a></li>
+                    <li><a href="aboutus.html" class="active">ABOUT US</a></li>
                     <li><a href="dishlist.html">DISH LIST</a></li>
                     <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
                     <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
 
                     <div class="xContainer">
-                     
-                    <div class="socialIcons">
-                        <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fa-brands fa-facebook"></i>
-                            <a href="https://www.messenger.com/t/100242331399704"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
+                        <div class="socialIcons">
+                            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
+                                    class="fa-brands fa-facebook"></i>
+                                <a href="https://www.messenger.com/t/100242331399704"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a
+                                    href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
                 </span>
-               
 
                 <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
 
             </ul>
         </nav>
-        <hr class="header-line">
-
-
-
-
-        <h1>Gallery</h1>
-        <p>Explore our delicious offerings and beautiful ambiance.</p>
     </header>
+
+
+
+
+
+
+
+
+
+
+    <!-- Main content section -->
     <main>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+
+        <!-- Full Image Section -->
+        <section class="full-image-section">
+            <img src="images/breeze1.jpg" alt="Cafe Image" class="full-image">
+            <div class="image-description">
+                <h2>Welcome to dbreeze-restaurant-roxas-avenue</h2>
+                <p>Experience the finest coffee and delicious meals in a cozy atmosphere. Join us for a delightful
+                    culinary journey.</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze4.jpg" alt="Dish 2" onclick="openModal(this)">
+        </section>
+
+
+        <!-- Best Seller Section with Three Pictures -->
+        <section class="best-seller">
+            <h2>Best Seller</h2>
+            <p>Discover our amazing selection of breakfast, lunch specials, and more.</p>
+            <div class="best-seller-images">
+                <div class="image-item">
+                    <p>Beef Biryani</p>
+                    <img src="burger.webp" alt="Best Seller 1">
+                </div>
+                <div class="image-item">
+                    <p>Mix Grilled</p>
+                    <img src="burger.webp" alt="Best Seller 2">
+                </div>
+                <div class="image-item">
+                    <p>Beef Masala</p>
+                    <img src="burger.webp" alt="Best Seller 3">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze5.jpg" alt="Dish 3" onclick="openModal(this)">
+        </section>
+
+        <!-- Featured dishes section -->
+        <section class="featured-dishes">
+            <div class="dish">
+                <img src="burger.webp" alt="All Day Full Irish Breakfast">
+                <h3>All Day Full Irish Breakfast</h3>
+                <p>Eggs, sausage, bacon, black pudding, mushrooms, tomato, and toast.</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            <div class="dish">
+                <img src="burger.webp" alt="Amazing Lunch Specials">
+                <h3>Amazing Lunch Specials</h3>
+                <p>From soups and salads to sandwiches and gourmet dishes.</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+            <div class="dish">
+                <img src="burger.webp" alt="Healthy Breakfast">
+                <h3>Healthy Breakfast</h3>
+                <p>A balanced choice with eggs, avocado, and whole grain toast.</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+        </section>
+
+        <!-- Soup and Beverages Section -->
+        <section class="soup-beverages-section">
+            <img src="burger.webp" alt="Best Soups and Beverages">
+            <div class="soup-info">
+                <h3>Our Signature Soups & Beverages</h3>
+                <p>Delicious, warm soups paired with refreshing beverages. Perfect for any time of the day.</p>
+
+                <!-- Single button with arrow -->
+                <div class="button-container">
+                    <a href="Dishlist.html" class="btn">Explore Dishes <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+        </section>
+
+        </section>
+
+
+
+        <!-- Featured Sandwiches, Pasta, and Arabic Menu Section -->
+        <section class="featured-sandwiches-pasta">
+            <h3>Featured Sandwiches & Pasta</h3>
+            <div class="dish-list">
+                <div class="dish-item">
+                    <img src="burger.webp" alt="Sandwiches">
+                    <h4>Gourmet Sandwiches</h4>
+                </div>
+                <div class="dish-item">
+                    <img src="burger.webp" alt="Pasta">
+                    <h4>Delicious Pasta</h4>
+                </div>
+                <div class="dish-item">
+                    <img src="burger.webp" alt="Beverages">
+                    <h4>Refreshing Beverages</h4>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+        </section>
+
+        <section class="video-section">
+            <h2>Watch Our Story</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/your-video-id" title="Aroma Cafe Video" frameborder="0"
+                    allowfullscreen>
+                </iframe>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
+        </section>
+        <section class="footer">
+
+            <div class="social-lines-section">
+                <div class="social-lines">
+                    <div class="line"></div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.messenger.com/t/100242331399704"><i
+                                class="fab fa-facebook-messenger"></i></a>
+                        <a
+                            href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="line"></div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
-            </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
-            </div>
-            <div class="gallery-item">
-                <img src="images/breeze1.jpg" alt="Dish 1" onclick="openModal(this)">
-            </div>
-            <!-- Add more images as needed -->
-        </div>
+            <ul class="list">
+                <li>
+                    <a href="#" class="active">Privacy note</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Terms of Use</a>
+                </li>
+            </ul>
+
+
+            <p class="copyright">
+                ©2024 D'breeze Restaurant. All right Reserved.
+            </p>
+
+
+        </section>
     </main>
-
-    <div id="modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-    </div>
-
-
-
-
-
-    <section class="footer">
-       
-        <div class="social">
-            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
-            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i class="fab fa-instagram"></i></a>
-        </div>
-        <ul class="list">
-            <li>
-                <a href="#" class="active">Privacy note</a>
-            </li>
-            <li>
-                <a href="#" class="active">Terms of Use</a>
-            </li>
-        </ul>   
-      
-      
-        <p class="copyright">
-            ©2024 D'breeze Restaurant. All right Reserved.
-        </p>
-      
-      
-      </section>
-      <script src="app.js"></script>
-      </body>
-      </html>
-
-    <script src="app.js"></script>
 </body>
+
 </html>
