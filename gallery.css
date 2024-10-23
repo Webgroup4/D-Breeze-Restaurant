@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -6,18 +7,18 @@
     box-sizing: border-box;
     font-family: Asul;
     color: oklch(from color l c h);
-
+    overflow-x: hidden;
 }
-
-
 
 body {
     font-family: 'Asul', sans-serif;
-    /* Changed to Asul */
     background-color: yellow;
     color: #333;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
+
 
 header {
     position: fixed;
@@ -25,15 +26,11 @@ header {
     top: 0;
     /* Position it at the top */
     left: 0;
-    /* Align to the left */
     width: 100%;
     /* Full width */
     background-color: yellow;
-    /* Background color */
     z-index: 1000;
-    /* Ensure it stays on top of other content */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    /* Optional: Add shadow for depth */
 }
 
 .xContainer {
@@ -72,6 +69,7 @@ header {
 .menu li a {
     display: inline-block;
     text-decoration: none;
+    /* Ensure no underline on all links */
     color: orangered;
     text-align: center;
     transition: 0.15s ease-in-out;
@@ -203,52 +201,20 @@ header {
 
 
 
-h2,
-h3,
-h4 {
-    font-family: 'Lobster', cursive;
-    color: #3c3c3c;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a:hover {
-    color: #555;
-}
-
-img {
-    border-radius: 10px;
-}
-
-
-/* Full Image Section */
-.full-image-section {
-    position: relative;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.image-container {
-    position: relative;
-    /* Position relative for absolute child */
-    overflow: hidden;
-    /* Ensure no content spills out */
-}
-
 .full-image {
     width: 100%;
     height: auto;
-    max-width: 1900px;
-    max-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+}
+
+.full-image img {
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
-    filter: blur(4px);
-    transform: scale(1.05);
-    /* Slight zoom to avoid empty edges due to blur */
-    margin: 0 auto;
-    /* Center the image horizontally */
 }
 
 .image-description {
@@ -604,3 +570,5 @@ p {
 .social-icons a:hover {
     opacity: 0.9;
 }
+
+
