@@ -62,449 +62,435 @@
     </header>
 
 
-    <main>
-        <div class="welcome-message">
-            <h1>Discover Our Culinary Delights</h1>
-            <p>Discover the essence of fresh, seasonal ingredients at D'Breeze. Our menu celebrates the bounty of nature, showcasing vibrant flavors and innovative techniques. Each dish is a testament to our commitment to quality and craftsmanship. Indulge your senses in a culinary journey that's both delicious and inspiring.</p>
-        </div>
+    <div class="container">
+        <h1>Discover Our Culinary Delights</h1>
+        <p class="intro-text">
+            Discover the essence of fresh, seasonal ingredients at D'Breeze. Our menu celebrates the bounty of nature, showcasing vibrant flavors and innovative techniques. Each dish is a testament to our commitment to quality and craftsmanship. Indulge your senses in a culinary journey that's both delicious and inspiring.
+        </p>
 
-        <div class="filter-container">
-            <div class="category-filter">
-                <label for="category">Category:</label>
-                <select id="category">
+        <div class="header-section">
+            <div class="categories">
+                <h3>Categories</h3>
+                <select id="category-select">
                     <option value="all">All</option>
                     <option value="appetizers">Appetizers</option>
-                    <option value="main-courses">Main Courses</option>
+                    <option value="main_courses">Main Courses</option>
                     <option value="Filipino Meals">Filipino Meals</option>
-                    <option value="drinks">Soup & Beverages</option>
-                    <option value="Pasta"> Pasta</option>
-                    <option value="Sandwiches"> Sandwiches</option>
-                    <option value="Pizza"> Pizza</option>
+                    <option value="Soup & Beverages">Soup & Beverages</option>
+                    <option value="Pasta">Pasta</option>
+                    <option value="Sandwiches">Sandwiches</option>
+                    <option value="Pizza">Pizza</option>
                 </select>
-                <i class="fas fa-filter"></i>
             </div>
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="Search for dishes...">
-                <i class="fas fa-search"></i>
+            <div class="search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search for dishes...">
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="category-section" id="appetizers">
+            <h2><i class="fas fa-utensils"></i> Appetizers</h2>
+            <div class="dish-images">
+                <div class="dish-item">
+                    <img src="DishlistIMG/hummuswcubbos.jpg" alt="Hummus w/ Cobus">
+                    <p>Hummus w/ Cobus</p>
+                    <button class="preview-button" onclick="previewDish('Hummus w/ Cobus')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/MoutabalwCobus.jpg" alt="Moutabal w/ Cobus">
+                    <p>Moutabal w/ Cobus</p>
+                    <button class="preview-button" onclick="previewDish('Moutabal w/ Cobus')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/samosa.jpg" alt="Classic Samosa">
+                    <p>Classic Samosa</p>
+                    <button class="preview-button" onclick="previewDish('Classic Samosa')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/chickensamosa.jpg" alt="Chicken Samosa">
+                    <p>Chicken Samosa</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Samosa')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/falafel.jpg" alt="Falafel">
+                    <p>Falafel</p>
+                    <button class="preview-button" onclick="previewDish('Falafel')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Finger w Chips.jpg" alt="Chicken Finger w/ Chips">
+                    <p>Chicken Finger w/ Chips</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Finger w/ Chips')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/French Fries.jpg" alt="French Fries">
+                    <p>French Fries</p>
+                    <button class="preview-button" onclick="previewDish('French Fries')">Preview</button>
+                </div>
             </div>
         </div>
 
-        <section id="menu-items">
-
-
-            <!-- Appetizers -->
-            <section id="appetizers">
-                <h2><i class="fa-solid fa-drumstick-bite"></i> Appetizers</h2>
-                <ul class="dish-list">
-                    <li data-category="appetizers">
-                        <img src="burger.webp" alt="Hummus w/ Cobus">
-                        <span>Hummus w/ Cobus - ₱159.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="appetizers">
-                        <img src="burger.webp" alt="Moutabal w/ Cobus">
-                        <span>Moutabal w/ Cobus - ₱179.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="appetizers">
-                        <img src="burger.webp" alt="Classic Samosa">
-                        <span>Classic Samosa - ₱210.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="appetizers">
-                        <img src="burger.webp" alt="Chicken Samosa">
-                        <span>Chicken Samosa - ₱199.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="appetizers">
-                        <img src="burger.webp" alt="Falafel">
-                        <span>Falafel - 230.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="appetizers">
-                        <img src="burger.webp" alt="Chicken Finger w/ Chips">
-                        <span>Chicken Finger w/ Chips - ₱279.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="appetizers">
-                        <img src="burger.webp" alt="French Fries">
-                        <span>French Fries - ₱109.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Main Courses -->
-
-            <section id="main-courses">
-                <h2><i class="fas fa-concierge-bell"></i> Main Courses</h2>
-                <ul class="dish-list">
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Biryani Chicken">
-                        <span>Biryani Chicken - ₱249.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Bukhari Chicken">
-                        <span>Bukhari Chicken - ₱269.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Mandi Chicken">
-                        <span>Mandi Chicken - ₱249.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Kebab Laham">
-                        <span>Kebab Laham - ₱250.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Kebab Dajaj">
-                        <span>Kebab Dajaj - ₱210.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Tikka">
-                        <span>Tikka - ₱210.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Shish Tawouk">
-                        <span>Shish Tawouk - ₱190.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Mix Grilled Solo">
-                        <span>Mix Grilled Solo - ₱299.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Mix Grilled Big Plate">
-                        <span>Mix Grilled Big Plate - ₱899.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Chicken Salona">
-                        <span>Chicken Salona - ₱350.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Chicken Curry">
-                        <span>Chicken Curry - ₱350.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Chicken Masala">
-                        <span>Chicken Masala - ₱350.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Beef Masala">
-                        <span>Beef Masala - ₱399.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Koofteh">
-                        <span>Koofteh - ₱399.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="main-courses">
-                        <img src="burger.webp" alt="Lamb Chops">
-                        <span>Lamb Chops - ₱1,099.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-
-                </ul>
-            </section>
-
-            <!-- Filipino Meals -->
-            <section id="Filipino Meals">
-                <h2><i class="fa-solid fa-bowl-food"></i> Filipino Meals</h2>
-                <ul class="dish-list">
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Chicken w/ Spaghetti">
-                        <span>Chicken w/ Spaghetti - ₱210.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Katsu Curry">
-                        <span>Katsu Curry - ₱299.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="1pc. Chicken">
-                        <span>1pc. Chicken - ₱140.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="2pcs. Fried Chicken">
-                        <span>2pcs. Fried Chicken - ₱189.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Burger Steak">
-                        <span>Burger Steak - ₱225.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Sizzling Bulalo">
-                        <span>Sizzling Bulalo - ₱499.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Battered Chicken">
-                        <span>Battered Chicken - ₱389.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Chicken Inasal">
-                        <span>Chicken Inasal - ₱189.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Crispy Calamares Rings">
-                        <span>Crispy Calamares Rings - ₱250.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Filipino Meals">
-                        <img src="burger.webp" alt="Beef Kare-Kare">
-                        <span>Beef Kare-Kare - ₱499.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Drinks -->
-            <section id="drinks">
-                <h2><i class="fas fa-glass-cheers"></i> Soup & Beverages</h2>
-
-                <ul class="dish-list">
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Bulalo">
-                        <span>Bulalo - ₱450.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Creamy Mushrooms">
-                        <span>Creamy Mushrooms - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Arabic Lentil Soup">
-                        <span>Arabic Lentil Soup - ₱149.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Strawberry Shakes">
-                        <span>Strawberry Shakes - ₱160.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Blackberry Shakes">
-                        <span>Blackberry Shakes - ₱160.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Raspberry">
-                        <span>Raspberry - ₱160.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Mulberry Shakes">
-                        <span>Mulberry Shakes - ₱140.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Lemon and Cucumber">
-                        <span>Lemon and Cucumber - ₱130.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Mango">
-                        <span>Mango - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Banana">
-                        <span>Banana - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Apple">
-                        <span>Apple - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Carrot">
-                        <span>Carrot - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Watermelon">
-                        <span>Watermelon - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Pineapple">
-                        <span>Pineapple - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="drinks">
-                        <img src="burger.webp" alt="Cocktai">
-                        <span>Cocktail - ₱210.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                </ul>
-
-            </section>
-
-            <!-- Pasta -->
-            <section id="Pasta">
-                <h2><i class="fas fa-utensils"></i> Pasta</h2>
-                <ul class="dish-list">
-                    <li data-category="Pasta">
-                        <img src="burger.webp" alt="Hummus w/ Cobus">
-                        <span>Penne Arabiata - ₱159.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pasta">
-                        <img src="burger.webp" alt="Moutabal w/ Cobus">
-                        <span>Spaghetti Bolognes - ₱179.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pasta">
-                        <img src="burger.webp" alt="Classic Samosa">
-                        <span>Pesto Pasta - ₱210.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pasta">
-                        <img src="burger.webp" alt="Chicken Samosa">
-                        <span>Lasagna - ₱899.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                </ul>
-            </section>
-
-              <!-- Sandwiches -->
-              <section id="Sandwiches">
-                <h2><i class="fa-solid fa-burger"></i> Sandwiches</h2>
-                <ul class="dish-list">
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Falafel Sandwich">
-                        <span>Falafel Sandwich - ₱89.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Clubhouse Sandwich">
-                        <span>Clubhouse Sandwich - ₱129.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Crispy Chicken Sandwich">
-                        <span>Crispy Chicken Sandwich - ₱89.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Beef Burger">
-                        <span>Beef Burger - ₱99.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Cheese Burger">
-                        <span>Cheese Burger - ₱110.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Ayares Sandwich">
-                        <span>Ayares Sandwich - ₱169.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Chicken Shawarma Sandwich">
-                        <span>Chicken Shawarma Sandwich - ₱120.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Beef Shawarma Sandwich">
-                        <span>Beef Shawarma Sandwich - ₱149.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Shawarma Platter">
-                        <span>Shawarma Platter - ₱299.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Sandwiches">
-                        <img src="burger.webp" alt="Shawarma Meat Platter">
-                        <span>Shawarma Meat Platter - ₱399.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                </ul>
-            </section>
-
-              <!-- Pizza -->
-              <section id="Pizza">
-                <h2><i class="fa-solid fa-pizza-slice"></i> Pizza</h2>
-                <ul class="dish-list">
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Chicken Hawaiian">
-                        <span>Chicken Hawaiian - ₱189.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Chicken Ham & Cheese">
-                        <span>Chicken Ham & Cheese - ₱179.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Beef Peperoni">
-                        <span>Beef Peperoni - ₱199.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Chicken Hawaiian Overload">
-                        <span>Chicken Hawaiian Overload - ₱289.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Beef Overload">
-                        <span>Beef Overload - ₱315.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Supreme ">
-                        <span>Supreme - ₱315.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Tuna Overload">
-                        <span>Tuna Overload - ₱289.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-                    <li data-category="Pizza">
-                        <img src="burger.webp" alt="Pizza Margherita">
-                        <span>Pizza Margherita - ₱289.00</span>
-                        <button class="add-to-cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-                    </li>
-
-                    
-                </ul>
-            </section>
-
-
-        </section>
-
-        <div class="cart">
-            <h3>Cart <i class="fas fa-shopping-cart"></i></h3>
-            <ul id="cart-list"></ul>
-            <p>Total: ₱<span id="total">0.00</span></p>
-            <button id="payNow">Pay Now</button>
+        <div class="category-section" id="main_courses">
+            <h2><i class="fas fa-drumstick-bite"></i> Main Courses</h2>
+            <div class="dish-images">
+                <div class="dish-item">
+                    <img src="DishlistIMG/Biryani Rice W biryani chicken.jpg" alt="Biryani Chickenn">
+                    <p>Biryani Chicken</p>
+                    <button class="preview-button" onclick="previewDish('Biryani Chicken')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Bukhari Chicken.jpg" alt="Bukhari Chicken">
+                    <p>Bukhari Chicken</p>
+                    <button class="preview-button" onclick="previewDish('Bukhari Chicken')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Mandi Chicken.jpg" alt="Mandi Chicken">
+                    <p>Mandi Chicken</p>
+                    <button class="preview-button" onclick="previewDish('Mandi Chicken')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Kebab Laham.jpg" alt="Kebab Laham">
+                    <p>Kebab Laham</p>
+                    <button class="preview-button" onclick="previewDish('Kebab Laham')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Kebab Dajaj.jpg" alt="Kebab Dajaj">
+                    <p>Kebab Dajaj</p>
+                    <button class="preview-button" onclick="previewDish('Kebab Dajaj')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Tikka.jpg" alt="Tikka">
+                    <p>Tikka</p>
+                    <button class="preview-button" onclick="previewDish('Tikka')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Shish Tawouk.jpg" alt="Shish Tawouk">
+                    <p>Shish Tawouk</p>
+                    <button class="preview-button" onclick="previewDish('Shish Tawouk')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Mix Grilled.jpg" alt="Mix Grilled">
+                    <p>Mix Grilled</p>
+                    <button class="preview-button" onclick="previewDish('Mix Grilled')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Mix Grilled Big Plate.jpg" alt="Mix Grilled Big Plate">
+                    <p>Mix Grilled Big Plate</p>
+                    <button class="preview-button" onclick="previewDish('Mix Grilled Big Plate')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Salona.jpg" alt="Chicken Salona">
+                    <p>Chicken Salona</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Salona')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Curry.jpg" alt="Chicken Curry">
+                    <p>Chicken Curry</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Curry')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Masala.jpg" alt="Chicken Masala">
+                    <p>Chicken Masala</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Masala')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Beef Masala.jpg" alt="Beef Masala">
+                    <p>Beef Masala</p>
+                    <button class="preview-button" onclick="previewDish('Beef Masala')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Koofteh.jpg" alt="Koofteh">
+                    <p>Koofteh</p>
+                    <button class="preview-button" onclick="previewDish('Koofteh')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Lamb Chops.jpg" alt="Lamb Chops">
+                    <p>Lamb Chops</p>
+                    <button class="preview-button" onclick="previewDish('Lamb Chops')">Preview</button>
+                </div>
+            </div>
         </div>
 
+        <div class="category-section" id="Filipino Meals">
+            <h2><i class="fas fa-ice-cream"></i> Filipino Meals</h2>
+            <div class="dish-images">
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken w Spaghetti.jpg" alt="Chicken w/ Spaghetti">
+                    <p>Chicken w/ Spaghetti</p>
+                    <button class="preview-button" onclick="previewDish('Chicken w/ Spaghetti')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Katsu Curry.jpg" alt="Katsu Curry">
+                    <p>Katsu Curry</p>
+                    <button class="preview-button" onclick="previewDish('Katsu Curry')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/1pc. Chicken.jpg" alt="1pc. Chicken">
+                    <p>1pc. Chicken</p>
+                    <button class="preview-button" onclick="previewDish('1pc. Chicken')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/2pcs. Fried Chicken.jpg" alt="2pcs. Fried Chicken">
+                    <p>2pcs. Fried Chicken</p>
+                    <button class="preview-button" onclick="previewDish('2pcs. Fried Chicken')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Burger Steak.jpg" alt="Burger Steak">
+                    <p>Burger Steak</p>
+                    <button class="preview-button" onclick="previewDish('Burger Steak')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Sizzling Bulalo.jpg" alt="Sizzling Bulalo">
+                    <p>Sizzling Bulalo</p>
+                    <button class="preview-button" onclick="previewDish('Sizzling Bulalo')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Battered Chicken.jpg" alt="Battered Chicken">
+                    <p>Battered Chicken</p>
+                    <button class="preview-button" onclick="previewDish('Battered Chicken')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Inasal.jpg" alt="Chicken Inasal">
+                    <p>Chicken Inasal</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Inasal')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Crispy Calamares Rings.jpg" alt="Crispy Calamares Rings">
+                    <p>Crispy Calamares Rings</p>
+                    <button class="preview-button" onclick="previewDish('Crispy Calamares Rings')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Beef Kare-Kare.jpg" alt="Beef Kare-Kare">
+                    <p>Beef Kare-Kare</p>
+                    <button class="preview-button" onclick="previewDish('Beef Kare-Kare')">Preview</button>
+                </div>
+            </div>
+        </div>
 
+        <div class="category-section" id="Soup & Beverages">
+            <h2><i class="fas fa-cocktail"></i> Soup & Beverages</h2>
+            <div class="dish-images">
+                <div class="dish-item">
+                    <img src="DishlistIMG/Bulalo.jpg" alt="Bulalo">
+                    <p>Bulalo</p>
+                    <button class="preview-button" onclick="previewDish('Bulalo')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Creamy Mushrooms.jpg" alt="Creamy Mushrooms">
+                    <p>Creamy Mushrooms</p>
+                    <button class="preview-button" onclick="previewDish('Creamy Mushrooms')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/arabic lentil soup.jpg" alt="Arabic Lentil Soup">
+                    <p>Arabic Lentil Soup</p>
+                    <button class="preview-button" onclick="previewDish('Arabic Lentil Soup')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Strawberry Shakes.jpg" alt="Strawberry Shakes">
+                    <p>Strawberry Shakes</p>
+                    <button class="preview-button" onclick="previewDish('Strawberry Shakes')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Blackberry Shakes.jpg" alt="Blackberry Shakes">
+                    <p>Blackberry Shakes</p>
+                    <button class="preview-button" onclick="previewDish('Blackberry Shakes')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Raspberry.jpg" alt="Raspberry">
+                    <p>Raspberry</p>
+                    <button class="preview-button" onclick="previewDish('Raspberry')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Mulberry Shakes.jpg" alt="Mulberry Shakes">
+                    <p>Mulberry Shakes</p>
+                    <button class="preview-button" onclick="previewDish('Mulberry Shakes')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Lemon and Cucumber.jpg" alt="Lemon and Cucumber">
+                    <p>Lemon and Cucumber</p>
+                    <button class="preview-button" onclick="previewDish('Lemon and Cucumber')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Mango.jpg" alt="Mango">
+                    <p>Mango</p>
+                    <button class="preview-button" onclick="previewDish('Mango')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Banana.jpg" alt="Banana">
+                    <p>Banana</p>
+                    <button class="preview-button" onclick="previewDish('Banana')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/apple.jpg" alt="Apple">
+                    <p>Apple</p>
+                    <button class="preview-button" onclick="previewDish('Apple')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Carrot.jpg" alt="Carrot">
+                    <p>Carrot</p>
+                    <button class="preview-button" onclick="previewDish('Carrot')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Watermelon.jpg" alt="Watermelon">
+                    <p>Watermelon</p>
+                    <button class="preview-button" onclick="previewDish('Watermelon')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Pineapple.jpg" alt="Pineapple">
+                    <p>Pineapple</p>
+                    <button class="preview-button" onclick="previewDish('Pineapple')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Cocktail.jpg" alt="Cocktail">
+                    <p>Cocktail</p>
+                    <button class="preview-button" onclick="previewDish('Cocktail')">Preview</button>
+                </div>
+            </div>
+        </div>
 
-    </main>
+        <div class="category-section" id="Pasta">
+            <h2><i class="fas fa-utensils"></i> Pasta</h2>
+            <div class="dish-images">
+                <div class="dish-item">
+                    <img src="DishlistIMG/Penne Arabiata.jpg" alt="Penne Arabiata">
+                    <p>Penne Arabiata</p>
+                    <button class="preview-button" onclick="previewDish('Penne Arabiata')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Spaghetti Bolognes.jpg" alt="Spaghetti Bolognes">
+                    <p>Spaghetti Bolognes</p>
+                    <button class="preview-button" onclick="previewDish('Spaghetti Bolognes')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Pesto Pasta.jpg" alt="Pesto Pasta">
+                    <p>Pesto Pasta</p>
+                    <button class="preview-button" onclick="previewDish('Pesto Pasta')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Lasagna.jpg" alt="Lasagna">
+                    <p>Lasagna</p>
+                    <button class="preview-button" onclick="previewDish('Lasagna')">Preview</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section" id="Sandwiches">
+            <h2><i class="fas fa-utensils"></i> Sandwiches</h2>
+            <div class="dish-images">
+                <div class="dish-item">
+                    <img src="DishlistIMG/Falafel Sandwich.jpg" alt="Falafel Sandwich">
+                    <p>Falafel Sandwich</p>
+                    <button class="preview-button" onclick="previewDish('Falafel Sandwich')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Clubhouse Sandwich.jpg" alt="Clubhouse Sandwich">
+                    <p>Clubhouse Sandwich</p>
+                    <button class="preview-button" onclick="previewDish('Clubhouse Sandwich')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Crispy Chicken Sandwich.jpg" alt="Crispy Chicken Sandwich">
+                    <p>Crispy Chicken Sandwich</p>
+                    <button class="preview-button" onclick="previewDish('Crispy Chicken Sandwich')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Beef Burger.jpg" alt="Beef Burger">
+                    <p>Beef Burger</p>
+                    <button class="preview-button" onclick="previewDish('Beef Burger')" >Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/cheese Burger.jpg" alt="Cheese Burger">
+                    <p>Cheese Burger</p>
+                    <button class="preview-button" onclick="previewDish('Cheese Burger')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Ayares Sandwich.jpg" alt="Ayares Sandwich">
+                    <p>Ayares Sandwich</p>
+                    <button class="preview-button" onclick="previewDish('Ayares Sandwich')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Shawarma Sandwich.jpg" alt="Chicken Shawarma Sandwich">
+                    <p>Chicken Shawarma Sandwich</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Shawarma Sandwich')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Beef Shawarma Sandwich.jpg" alt="Beef Shawarma Sandwich">
+                    <p>Beef Shawarma Sandwich</p>
+                    <button class="preview-button" onclick="previewDish('Beef Shawarma Sandwich')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Shawarma Platter.jpg" alt="Shawarma Platter">
+                    <p>Shawarma Platter</p>
+                    <button class="preview-button" onclick="previewDish('Shawarma Platter')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Shawarma Meat Platter.jpg" alt="Shawarma Meat Platter">
+                    <p>Shawarma Meat Platter</p>
+                    <button class="preview-button" onclick="previewDish('Shawarma Meat Platter')">Preview</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section" id="Pizza">
+            <h2><i class="fas fa-utensils"></i> Pizza</h2>
+            <div class="dish-images">
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Hawaiian.jpg" alt="Chicken Hawaiian">
+                    <p>Chicken Hawaiian</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Hawaiian')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Ham & Cheese.jpg" alt="Chicken Ham & Cheese">
+                    <p>Chicken Ham & Cheese</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Ham & Cheese')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Beef Peperoni.jpg" alt="Beef Peperoni">
+                    <p>Beef Peperoni</p>
+                    <button class="preview-button" onclick="previewDish('Beef Peperoni')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Chicken Hawaiian Overload.jpg" alt="Chicken Hawaiian Overload">
+                    <p>Chicken Hawaiian Overload</p>
+                    <button class="preview-button" onclick="previewDish('Chicken Hawaiian Overload')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Beef Overload.jpg" alt="Beef Overload">
+                    <p>Beef Overload</p>
+                    <button class="preview-button" onclick="previewDish('Beef Overload')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Supreme.jpg" alt="Supreme">
+                    <p>Supreme</p>
+                    <button class="preview-button" onclick="previewDish('Supreme')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Tuna Overload.jpg" alt="Tuna Overload">
+                    <p>Tuna Overload</p>
+                    <button class="preview-button" onclick="previewDish('Tuna Overload')">Preview</button>
+                </div>
+                <div class="dish-item">
+                    <img src="DishlistIMG/Pizza Margherita.jpg" alt="Pizza Margherita">
+                    <p>Pizza Margherita</p>
+                    <button class="preview-button" onclick="previewDish('Pizza Margherita')">Preview</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="preview-modal" class="preview-modal" style="display: none;">
+            <div class="preview-content">
+                <button class="close-button" onclick="closePreview()">&times;</button>
+                <img id="preview-image" src="" alt="Preview" class="preview-image" />
+                <p id="preview-description" class="preview-description"></p>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+
     <section class="footer">
 
         <div class="social-lines-section">
@@ -513,7 +499,8 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
                             class="fab fa-facebook"></i></a>
-                    <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="https://www.messenger.com/t/100242331399704"><i
+                            class="fab fa-facebook-messenger"></i></a>
                     <a
                         href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
                             class="fab fa-instagram"></i></a>
@@ -523,16 +510,16 @@
         </div>
         <ul class="list">
             <li>
-                <a>Privacy note</a>
+                <a href="#" class="active">Privacy note</a>
             </li>
             <li>
-                <a>Terms of Use</a>
+                <a href="#" class="active">Terms of Use</a>
             </li>
         </ul>
 
 
         <p class="copyright">
-            ©2024 D'breeze Restaurant. All right Reserved.
+            ©2024 D'Breeze Restaurant. All right Reserved.
         </p>
 
 

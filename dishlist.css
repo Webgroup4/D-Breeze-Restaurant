@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -8,14 +6,29 @@
     box-sizing: border-box;
     font-family: Asul;
     color: oklch(from color l c h);
+}
 
+body {
+    font-family: 'Asul', sans-serif;
+    background-color: yellow;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 
-
-body {
-    font-family: "Poppins" sans-serif;
+header {
+    position: fixed;
+    /* Make header fixed */
+    top: 0;
+    /* Position it at the top */
+    left: 0;
+    width: 100%;
+    /* Full width */
     background-color: yellow;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .xContainer {
@@ -54,6 +67,7 @@ body {
 .menu li a {
     display: inline-block;
     text-decoration: none;
+    /* Ensure no underline on all links */
     color: orangered;
     text-align: center;
     transition: 0.15s ease-in-out;
@@ -138,7 +152,7 @@ body {
 
 
 .socialIcons {
-    display:none;
+    display: none;
 }
 
 
@@ -181,116 +195,266 @@ body {
 
 
 
-.header-line {
-    border: none; /* Remove default styles */
-    height: 1px; /* Height of the line */
-    background-color: #ff9800; /* Color of the line */
-    margin: 0; /* Remove default margins */
+/* Main container */
+main {
+    max-width: 1200px;
+    margin: 150px auto 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffe57f, #ffcc80);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 
-header {
+.container {
+    max-width: 1400px; /* Increase the container width */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8db69;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: asul sans-serif;
+}
+
+
+
+
+
+h1 {
     text-align: center;
+    font-size: 2.5em; /* Set font size to 2.5em */
+    color: orange; /* Change color to orange */
+}
+
+
+.intro-text {
+    text-align: justify;         /* Justify text alignment */
+    font-size: 20px;             /* Set font size */
+    line-height: 1.6;            /* Add line height for readability */
+    text-indent: 10%;            /* Indent the first line */
+    margin: 10px 0 20px;         /* Add space above and below */
+    padding: 5px 0;              /* Subtle padding for extra breathing room */
+    color:#333;
+    font-family: asul;
+}
+
+
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 20px;
-    color: #ff9800; /* Darker yellow for the header */
 }
 
-.menu-section {
-    text-align: center; /* Center align the headings and menu items */
-    margin-bottom: 40px; /* Space between sections */
+.categories {
+    position: relative; /* Enable absolute positioning for the icon */
+    width: 20%;
 }
 
-.menu-container {
+.categories h3 {
+    color: orangered;
+    margin-bottom: 5px;
+}
+
+.categories select,
+.search input {
+    padding: 8px;
+    width: 100%;
+    border-radius: 12px; /* Add rounded corners with a radius */
+    border: 2px solid #ccc; /* Add a solid border */
+    box-shadow: orangered; /* Optional shadow */
+}
+
+
+.search {
+    position: relative; /* Enable absolute positioning for the icon */
+}
+
+.search h3 {
+    color: orangered;
+    margin-bottom: 5px;
+}
+.search input {
+    padding: 10px; /* Decrease padding for a shorter height */
+    width: 100%; /* Make it full width within the parent */
+    border-radius: 15px; /* Slightly rounded corners for an oblong shape */
+    border: 1px solid orange; /* Optional: add a border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
+    margin-left: -30px;
+    padding-right: 30px;
+}
+
+
+.search-container {
+    position: relative; /* Enables absolute positioning for the icon */
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Position on the right */
+    transform: translateY(-50%); /* Center vertically */
+    color: orange; /* Change icon color to orange */
+    pointer-events: none; /* Prevents icon from blocking input clicks */
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: -5px; /* Adjusted to be slightly further right */
+    transform: translateY(-50%); /* Center vertically */
+    color: orange; /* Icon color remains orange */
+    pointer-events: none; /* Prevents icon from blocking input clicks */
+}
+
+
+
+.container h1{
+    margin-top: 100px;
+}
+
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-section h2 {
+    color: #333;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 5px;
+    color: #ff5722;
+}
+
+.dish-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center align items */
+    justify-content: space-between; /* Distribute items evenly across the row */
+    gap: 20px; /* Add gap between images */
 }
 
-.menu-item {
-    background: #fffde7; /* Light yellow background for menu items */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    padding: 20px;
+.dish-item {
+    display: flex;
+    flex-direction: column; /* Stack image vertically */
+    align-items: center; /* Center items horizontally */
+    width: calc(23% - 20px); /* Maintain width */
     text-align: center;
-    width: 400px; /* Width for menu items */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly below */
-    animation: fadeIn 0.5s forwards; /* Animation for fading in */
-}
-
-.menu-item:hover {
-    background: #fff9c4; /* Lighter yellow on hover */
-    transform: scale(1.05) translateY(-5px); /* Scale up and lift slightly on hover */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-
-.food-image {
-    width: 80%; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 300px; /* Set a maximum width for images */
+    transition: transform 0.2s;
+    background-color: white;
+    padding: 10px;
     border-radius: 8px;
-    transition: transform 0.3s ease; /* Transition for image zoom */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.menu-item:hover .food-image {
-    transform: scale(1.1); /* Slight zoom effect on image hover */
+.dish-item p {
+    margin: 5px 0; /* Space between button and text */
 }
 
-h2 {
-    color: #ff9800; /* Darker yellow for titles */
-    margin: 10px 0; /* Add some margin for spacing */
-    text-align: center; /* Center align the headings */
+.dish-item .preview-button {
+    margin-bottom: 5px; /* Space below button */
+    /* Additional styles for the button can be added here */
 }
 
-p {
-    color: #666; /* Keeping text color standard for readability */
-    margin-bottom: 15px; /* Add some margin for spacing */
+
+
+
+.dish-item img {
+    width: 100%; /* Images fill the dish item */
+    height: 80%;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
 }
 
-button {
-    background-color: #ffc107; /* Yellow button */
+.dish-item:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.preview-button {
+    background-color: #ff9800;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    padding: 8px 12px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Button hover effect */
 }
 
-button:hover {
-    background-color: #ffb300; /* Darker yellow on hover */
-    transform: translateY(-3px); /* Lift button on hover */
-}
-
-/* Animation for menu items */
-@keyframes fadeIn {
-    to {
-        opacity: 1; /* Fade in */
-        transform: translateY(0); /* Move to original position */
-    }
+.preview-button:hover {
+    background-color: #e68900;
 }
 
 
+/* Modal Background */
+.preview-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px); /* Increased blur effect */
+}
 
+/* Modal Content */
+.preview-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+    position: relative;
+}
 
+/* Image Styles */
+.preview-image {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow around image */
+}
 
+/* Close Button Styles */
+.close-button {
+    font-size: 50px;
+    color: rgb(255, 247, 0);
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    background: transparent;
+    border: none;
+    outline: none;
+    z-index: 1001;
+}
 
-
-/*  footer */
+/* Description Styles */
+.preview-description {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+    padding: 0 10px;
+    line-height: 1.6; /* Improved line spacing */
+    text-align: justify; /* Justified text for a cleaner look */
+    text-decoration: none; /* Ensures no underline */
+}
 
 .footer {
     padding: 5px 0;
     background-color: yellow;
 }
 
-.footer .social{
+.footer .social {
     text-align: center;
     padding-bottom: 10px;
 }
 
-.footer .social::before{
+.footer .social::before {
     content: "";
     display: inline-block;
     width: 590px;
@@ -298,9 +462,10 @@ button:hover {
     position: absolute;
     background: #000;
     left: 3%;
-    top: 211%;
+    top: 85%;
 }
-.footer .social::after{
+
+.footer .social::after {
     content: "";
     display: inline-block;
     width: 600px;
@@ -308,24 +473,31 @@ button:hover {
     position: absolute;
     background: #000;
     left: 58%;
-    top: 211%;
+    top: 85%;
 }
+
 @media(max-width: 1500px) {
-    .footer .social::before{
+    .footer .social::before {
         display: none;
         width: 650px;
-        
+
     }
-    
+
 }
+
 @media(max-width: 1500px) {
-    .footer .social::after{
+    .footer .social::after {
         display: none;
     }
-    
+
 }
 
+@media(max-width: 1500px) {
+    .line {
+        display: none;
+    }
 
+}
 
 
 
@@ -373,4 +545,49 @@ button:hover {
     text-align: center;
 }
 
+/* Social Lines Section */
+.social-lines-section {
+    margin-top: 30px;
+    /* Add space between image and lines */
+    text-align: center;
+}
 
+.social-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.list li a {
+    color: black;
+    transition: 0.3s;
+}
+
+.list li a:hover {
+    color: red;
+    transform: scale(1.1);
+}
+.line {
+    width: 600px;
+    height: 2px;
+    background-color: #000;
+    /* Change the color to match your design */
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.social-icons a:hover {
+    opacity: 0.9;
+}

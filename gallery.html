@@ -34,7 +34,16 @@
                 <span class="menu">
                     <li><a href="aboutus.html" class="active">ABOUT US</a></li>
                     <li><a href="dishlist.html">DISH LIST</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li>
+                        <a href="aboutus.html">GALLERY</a>
+                        <ul class="dropdown">
+                            <li><a href="#bestseller">Best Seller</a></li>
+                            <li><a href="#Culinary Creations">Culinary Creations</a></li>
+                            <li><a href="#ambiance">Ambiance & Interiors</a></li>
+                            <li><a href="#Customer">Customer Features</a></li>
+                            <li><a href="#video">Watch and Enjoy!</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">CONTACT US</a></li>
                     <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
 
@@ -70,98 +79,116 @@
     <main>
 
         <!-- Full Image Section -->
-        <section class="full-image-section">
-            <img src="images/breeze1.jpg" alt="Cafe Image" class="full-image">
-            <div class="image-description">
-                <h2>Welcome to dbreeze-restaurant-roxas-avenue</h2>
-                <p>Experience the finest coffee and delicious meals in a cozy atmosphere. Join us for a delightful
-                    culinary journey.</p>
-            </div>
-        </section>
+        <div class="full-image">
+            <img src="images/gallerybig.jpg" alt="Descriptive Alt Text">
+            <div class="blurred-text"><p>Discover a visual journey that captures our creativity, passion, and dedication. Each image tells a story, reflecting the essence of our work and the moments that inspire us.Whether you’re looking for inspiration or simply enjoying the beauty of our creations, we hope you find something that resonates with you. Dive in and enjoy the experience!
+
+            </p></div>
+        </div>
 
 
         <!-- Best Seller Section with Three Pictures -->
+        <hr id="bestseller">
         <section class="best-seller">
             <h2>Best Seller</h2>
-            <p>Discover our amazing selection of breakfast, lunch specials, and more.</p>
+            <p>Discover our most popular dishes that have delighted our customers! From hearty breakfasts to satisfying lunch specials, each item is crafted with care and flavor.</p>
             <div class="best-seller-images">
-                <div class="image-item">
-                    <p>Beef Biryani</p>
-                    <img src="burger.webp" alt="Best Seller 1">
+                <div class="column">
+                    <img src="images/bestseller1.jpg" alt="Best Seller 1">
+                    <h3>Beef Biryani</h3>
                 </div>
-                <div class="image-item">
-                    <p>Mix Grilled</p>
-                    <img src="burger.webp" alt="Best Seller 2">
+                <div class="column">
+                    <img src="images/bestseller2.jpg" alt="Best Seller 2">
+                    <h3>Mix Grilled</h3>
                 </div>
-                <div class="image-item">
-                    <p>Beef Masala</p>
-                    <img src="burger.webp" alt="Best Seller 3">
+                <div class="column">
+                    <img src="images/bestseller3.jpg" alt="Best Seller 3">
+                    <h3>Beef Masala</h3>
                 </div>
             </div>
         </section>
+        
+        
 
-        <!-- Featured dishes section -->
-        <section class="featured-dishes">
-            <div class="dish">
-                <img src="burger.webp" alt="All Day Full Irish Breakfast">
-                <h3>All Day Full Irish Breakfast</h3>
-                <p>Eggs, sausage, bacon, black pudding, mushrooms, tomato, and toast.</p>
-            </div>
-            <div class="dish">
-                <img src="burger.webp" alt="Amazing Lunch Specials">
-                <h3>Amazing Lunch Specials</h3>
-                <p>From soups and salads to sandwiches and gourmet dishes.</p>
-            </div>
-            <div class="dish">
-                <img src="burger.webp" alt="Healthy Breakfast">
-                <h3>Healthy Breakfast</h3>
-                <p>A balanced choice with eggs, avocado, and whole grain toast.</p>
-            </div>
-        </section>
+        
 
-        <!-- Soup and Beverages Section -->
+        <!-- culinary section -->
+        <hr id="Culinary Creations">
         <section class="soup-beverages-section">
             <img src="burger.webp" alt="Best Soups and Beverages">
             <div class="soup-info">
-                <h3>Our Signature Soups & Beverages</h3>
-                <p>Delicious, warm soups paired with refreshing beverages. Perfect for any time of the day.</p>
+                <h3>Explore Our Culinary Creations</h3>
+                <p>We offer a diverse selection of over 140 delicious dishes, showcasing flavors from around the world. From comforting classics to adventurous new creations, our menu is crafted to delight every palate. Whether you’re seeking a quick bite, a hearty meal, or a sweet treat, you’ll find the perfect option to satisfy your cravings. Join us on a culinary journey and discover the tastes that await you!</p>
 
                 <!-- Single button with arrow -->
-                <div class="button-container">
-                    <a href="Dishlist.html" class="btn">Explore Dishes <i class="fas fa-arrow-right"></i></a>
+                <div class="button-container"><br>
+                    <a href="dishlist.html" class="btn">Explore Dishes <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
-        </section>
-
-
-
-        <!-- Featured Sandwiches, Pasta, and Arabic Menu Section -->
-        <section class="featured-sandwiches-pasta">
-            <h3>Featured Sandwiches & Pasta</h3>
-            <div class="dish-list">
-                <div class="dish-item">
-                    <img src="burger.webp" alt="Sandwiches">
-                    <h4>Gourmet Sandwiches</h4>
+      <!-- ambiance -->
+        <hr id="ambiance">
+        <section class="ambiance">
+            <h2>Ambiance & Interiors</h2>
+           
+            <div class="ambiance-images">
+                <div class="column">
+                    <img src="images/ambiance1.jpg" alt="Best Seller 1">   
                 </div>
-                <div class="dish-item">
-                    <img src="burger.webp" alt="Pasta">
-                    <h4>Delicious Pasta</h4>
+                <div class="column">
+                    <img src="images/ambiance2.jpg" alt="Best Seller 2"> 
                 </div>
-                <div class="dish-item">
-                    <img src="burger.webp" alt="Beverages">
-                    <h4>Refreshing Beverages</h4>
+                <div class="column">
+                    <img src="images/ambiance3.jpg" alt="Best Seller 3">   
+                </div>
+                <div class="column">
+                    <img src="images/ambiance4.jpg" alt="Best Seller 1">   
+                </div>
+                <div class="column">
+                    <img src="images/ambiance5.jpg" alt="Best Seller 2"> 
+                </div>
+                <div class="column">
+                    <img src="images/ambiance6.jpg" alt="Best Seller 3">   
                 </div>
             </div>
         </section>
 
+
+         <!-- customer -->
+        <hr id="Customer">
+        <section class="ambiance">
+            <h2>Customer Features</h2>
+           
+            <div class="ambiance-images">
+                <div class="column">
+                    <img src="images/customer1.jpeg" alt="Best Seller 1">   
+                </div>
+                <div class="column">
+                    <img src="images/ambiance2.jpg" alt="Best Seller 2"> 
+                </div>
+                <div class="column">
+                    <img src="images/ambiance3.jpg" alt="Best Seller 3">   
+                </div>
+                <div class="column">
+                    <img src="images/ambiance4.jpg" alt="Best Seller 1">   
+                </div>
+                <div class="column">
+                    <img src="images/ambiance5.jpg" alt="Best Seller 2"> 
+                </div>
+                <div class="column">
+                    <img src="images/ambiance6.jpg" alt="Best Seller 3">   
+                </div>
+            </div>
+        </section>
+
+
+        <!-- video -->
+         <hr id="video">
         <section class="video-section">
-            <h2>Watch Our Story</h2>
+            <h2>Watch and Enjoy!</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/your-video-id" title="Aroma Cafe Video" frameborder="0"
-                    allowfullscreen>
-                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UKiW2sisWL0?si=yC7sJcaW8cZqZGHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
         <section class="footer">
@@ -192,7 +219,7 @@
 
 
             <p class="copyright">
-                ©2024 D'breeze Restaurant. All right Reserved.
+                ©2024 D'Breeze Restaurant. All right Reserved.
             </p>
 
 

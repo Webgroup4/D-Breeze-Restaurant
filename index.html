@@ -58,13 +58,13 @@
             <img src="images/breeze1.jpg" alt="D' Breeze">
         </div>
         <div class="image">
-            <img src="images/Interior.jpg" alt="D' Breeze">
+            <img src="images/Interiorii.jpg" alt="D' Breeze">
         </div>
         <div class="image">
             <img src="images/Interior1.jpg" alt="D' Breeze">
         </div>
         <div class="image">
-            <img src="images/Interior1.jpg" alt="D' Breeze">
+            <img src="images/2.jpg" alt="D' Breeze">
         </div>
         <div class="button">
             <a onclick="nextimg(-1)" class="prev">❮</a>
@@ -137,6 +137,49 @@
         });
 
     </script>
+    <script>
+        var imageno = 1;
+        displayimg(imageno);
+    
+        function nextimg(n) {
+            displayimg(imageno += n);
+        }
+    
+        function currentSlide(n) {
+            displayimg(imageno = n);
+        }
+    
+        function displayimg(n) {
+            var i;
+            var image = document.getElementsByClassName("image");
+            var dots = document.getElementsByClassName("dot");
+    
+            if (n > image.length) {
+                imageno = 1;
+            }
+    
+            if (n < 1) {
+                imageno = image.length;
+            }
+    
+            for (i = 0; i < image.length; i++) {
+                image[i].style.display = "none";
+            }
+    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+    
+            image[imageno - 1].style.display = "block";
+            dots[imageno - 1].className += " active";
+        }
+    
+        // Auto change images every 3 seconds
+        setInterval(function() {
+            nextimg(1);
+        }, 3000); // Change 3000 to any number of milliseconds you want for the interval
+    </script>
+    
     <section>
 
 
@@ -164,7 +207,7 @@
 
 
         <p class="copyright">
-            ©2024 D'breeze Restaurant. All right Reserved.
+            ©2024 D'Breeze Restaurant. All right Reserved.
         </p>
 
 

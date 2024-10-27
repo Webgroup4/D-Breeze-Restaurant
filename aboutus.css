@@ -1,7 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +6,6 @@
     box-sizing: border-box;
     font-family: Asul;
     color: oklch(from color l c h);
-    overflow-x: hidden;
 }
 
 body {
@@ -195,6 +190,37 @@ header {
 
 }
 
+/* dropdown */
+.dropdown {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; 
+    background-color: yellow;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 1; 
+    border-radius: 20px;
+    margin-left: -50px;
+    
+  }
+  
+  .dropdown li { 
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd; /* Add a subtle border */
+  }
+  
+  .dropdown li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+  }
+  
+  .dropdown li a {
+    color: orangered;
+    text-decoration: none; /* Remove default link underline */
+  }
+  
+  /* Show the dropdown on hover */
+  li:hover .dropdown {
+    display: block;
+  }
 
 
 
@@ -202,23 +228,67 @@ header {
 
 
 
-
-
+hr {
+    border: none;  
+}
 .full-image {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+    position: relative;
     width: 100%;
     height: 100vh;
-    margin: auto;
-    position: relative;
+    overflow: hidden;
 }
 
 .full-image img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
 }
+
+.blurred-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f9f2f2;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1em;
+    padding: 20px;
+    font-size: 2em; /* Base font size */
+    text-align: center;
+    z-index: 100;
+    font-family: Asul;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .blurred-text {
+        font-size: 1em; /* Slightly smaller text */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .blurred-text {
+        font-size: 1.5em; /* Further reduce text size */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blurred-text {
+        font-size: 1.2em; /* Even smaller text */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blurred-text {
+        font-size: 1em; /* Smallest text for mobile */
+        padding: 5px;
+    }
+}
+
+
 
 /* Our Story Section */
 .our-story-section {
@@ -228,53 +298,104 @@ header {
     max-width: 1200px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #fff176;
-    /* Light yellow background */
+    background-color: #fff9c4;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .our-story-images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* Space between images */
+    flex: 1; /* Allow images to grow */
 }
 
-.top-images,
-.bottom-images {
-    display: flex;
-    gap: 10px;
-}
-
-.top-images img,
-.bottom-images img {
-    width: 300px;
+.our-story-images img {
+    width: 100%; /* Full width for the grid cells */
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.top-images img:hover,
-.bottom-images img:hover {
-    transform: scale(1.1);
+.our-story-images img:hover {
+    transform: scale(1.05); /* Slightly reduce hover scale */
 }
 
 .our-story-text {
     flex: 1;
     padding-left: 20px;
-    text-align: left;
+   
+    
 }
 
 .our-story-text h2 {
     font-size: 2em;
+    text-align: center;
     margin-bottom: 15px;
-    color: #e65100;
+    color: #f57f17;
 }
 
 .our-story-text p {
     font-size: 1.1em;
+    text-align: justify;
+    text-indent: 60px;
 }
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .our-story-section {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .our-story-images {
+        grid-template-columns: repeat(2, 1fr); /* Maintain two columns */
+    }
+
+    .our-story-images img {
+        width: 90%; /* Adjust image size for smaller screens */
+        margin: auto; /* Center images */
+    }
+
+    .our-story-text {
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center text */
+    }
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    padding: 20px; 
+    margin: 8%;
+  }
+  
+  .column {
+    background-color: #fff9c4;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .column h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #f57f17;
+  }
+  
+  .column p {
+    font-size: 1.1em;
+    text-align: justify;
+    text-indent: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .mission-vision {
+      grid-template-columns: 1fr; 
+    }
+  }
 
 /* Our Chef Section */
 .chef-section {
@@ -296,12 +417,15 @@ header {
 
 .chef-info h2 {
     font-size: 2em;
+    text-align: center;
     margin-bottom: 15px;
     color: #f57f17;
 }
 
 .chef-info p {
     font-size: 1.1em;
+    text-align: justify;
+    text-indent: 60px;
 }
 
 .chef-image {
@@ -320,6 +444,34 @@ header {
     /* Hover zoom effect */
 }
 
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .chef-section {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .chef-info {
+        margin-right: 0; /* Remove right margin */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .chef-image {
+        margin-top: 20px; /* Add space above the image */
+        flex: 1; /* Allow image to grow */
+    }
+
+    .chef-image img {
+        width: 100%; /* Make image full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+
+
+
 /* Centered Image Section */
 .centered-image-section {
     display: flex;
@@ -328,7 +480,7 @@ header {
     max-width: 1200px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #ffecb3;
+    background-color: #fff9c4;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -353,7 +505,50 @@ header {
     text-align: center;
     padding: 0 20px;
     font-size: 1.1em;
+    
 }
+.centered-text p{
+    font-size: 1.1em;
+    text-align: justify;
+    text-indent: 60px;
+    
+}
+.centered-text h2{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #f57f17;
+    
+}
+
+/* Media Query for Centered Image Section on Smaller Screens */
+@media (max-width: 768px) {
+    .centered-image-section {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 20px; /* Adjust padding */
+        text-align: center; /* Center align text */
+    }
+
+    .centered-image {
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    .centered-image img {
+        width: 100%; /* Make image full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .centered-text {
+        padding: 0; /* Remove padding */
+        font-size: 1em; /* Adjust font size for better readability */
+    }
+}
+
+
+
+
+
+
 
 
 
@@ -367,7 +562,7 @@ header {
 
 .blurred-image img {
     width: 100%;
-    height: 75vh;
+    height: 30%;
     border-radius: 8px;
    
 }
@@ -386,7 +581,20 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 100; /* Ensure it appears above other elements */
 }
+.blurred-text p{
+    font-family: Asul;
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 60px;
+}
 
+@media(max-width: 900px) {
+    .blurred-text p {
+        width: 400px;
+        
+    }
+
+}
 
 .footer {
     padding: 5px 0;
@@ -461,7 +669,15 @@ header {
     opacity: 0.9;
 }
 
+.list li a {
+    color: black;
+    transition: 0.3s;
+}
 
+.list li a:hover {
+    color: red;
+    transform: scale(1.1);
+}
 
 .footer ul {
     margin-top: 0;
@@ -504,7 +720,12 @@ header {
     background-color: #000;
     /* Change the color to match your design */
 }
+@media(max-width: 1500px) {
+    .line {
+        display: none;
+    }
 
+}
 .social-icons a {
     font-size: 24px;
     color: orangered;
