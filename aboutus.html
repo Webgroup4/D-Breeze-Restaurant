@@ -8,24 +8,13 @@
     <title>D' Breeze About Us</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
+    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/dbreezelogo.jpg.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-
-
-
-
-
 
 <body>
     <header>
@@ -35,7 +24,7 @@
                 <input type="checkbox" id="check">
                 <span class="menu">
                     <li>
-                        <a href="aboutus.html" class="active">ABOUT US</a>
+                        <a href="aboutus.html">ABOUT US</a>
                         <ul class="dropdown">
                             <li><a href="#ourstory">Our Story</a></li>
                             <li><a href="#values">Our Values</a></li>
@@ -44,8 +33,6 @@
                             <li><a href="#ambiance">Our Ambiance</a></li>
                         </ul>
                     </li>
-                    
-
                     <li><a href="dishlist.html">DISH LIST</a></li>
                     <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="contact.html">CONTACT US</a></li>
@@ -53,119 +40,113 @@
 
                     <div class="xContainer">
                         <div class="socialIcons">
-                            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
-                                    class="fa-brands fa-facebook"></i>
-                                <a href="https://www.messenger.com/t/100242331399704"><i
-                                        class="fa-brands fa-twitter"></i></a>
-                                <a
-                                    href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
-                                        class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fa-brands fa-facebook"></i>
+                            <a href="https://www.messenger.com/t/100242331399704"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </span>
 
                 <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
-
             </ul>
         </nav>
     </header>
 
 
-
-
-
-
-
-
-
-
-    <div class="full-image">
+    <hr id="welcome">
+    <section class="full-image">
         <img src="images/Interior28.jpg" alt="Descriptive Alt Text">
-        <div class="blurred-text"><p>Welcome to D Breeze Restaurant! We invite you to discover our story, values, and the passion that fuels our culinary journey. Our mission is to create unforgettable dining experiences with vibrant, delicious dishes served in a warm and inviting atmosphere.</p></div>
-    </div>
-    
+        <section class="blurred-text">
+            <p>Welcome to D Breeze Restaurant! We invite you to discover our story, values, and the passion that fuels our culinary journey. Our mission is to create unforgettable dining experiences with vibrant, delicious dishes served in a warm and inviting atmosphere.</p>
+        </section>
+    </section>
 
-        <!-- Our Story Section -->
-         <hr id="ourstory">
-<section class="our-story-section">
-    <div class="our-story-images">
-        <div class="top-images">
-            <img src="images/breeze1.jpg" alt="Our Story Image 1">
-            <img src="images/breeze1.jpg" alt="Our Story Image 2">
+    <!-- Our Story Section -->
+    <hr id="ourstory">
+    <section class="our-story-section">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/ourstory1.jpg" alt="Our Story Image 1">
+            </div>
+            <div class="slide">
+                <img src="images/ourstory2.jpg" alt="Our Story Image 2">
+            </div>
+            <div class="slide">
+                <img src="images/ourstory3.jpg" alt="Our Story Image 3">
+            </div>
+            <div class="slide">
+                <img src="images/ourstory4.png" alt="Our Story Image 4">
+            </div>
+            <div class="navigation">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
         </div>
-        <div class="bottom-images">
-            <img src="images/breeze1.jpg" alt="Our Story Image 3">
-            <img src="images/breeze1.jpg" alt="Our Story Image 4">
+        <div class="our-story-text">
+            <h2>Our Story</h2>
+            <p>D’Breeze Restaurant opened its doors in 2019. Aiming to bring the vibrant flavors of Filipino cuisine to the local community: founded by Ma. Cristina Cazandra Capapas. A passionate OFW with roots in the Philippines. The Restaurant quickly became a beloved spot because of its warm and welcoming atmosphere, and its famous Batangas like Lomi and Chicken lechon. 
+            In 2022, D’breeze Restaurant underwent an exciting transformation evolving into a unique fusion of Filipino and Arabic cuisines. Inspired by the growing cultural diversity in the area and the increasing popularity of Middle Eastern flavors and with the help of Co-Owner Mr. Hamad Almazrouei, an Emirati Local. D’breeze restaurant began to experiment with new local dishes that blended these two rich culinary traditions.</p>
         </div>
-    </div>
-    <div class="our-story-text">
-        <h2>Our Story</h2>
-        <p>D’Breeze Restaurant opened its doors in 2019. Aiming to bring the vibrant flavors of Filipino cuisine to the local community: founded by Ma. Cristina Cazandra Capapas. A passionate OFW with roots in the Philippines.The Restaurant quickly became a beloved spot because of its warm and welcoming atmosphere, and its famous Batangas like Lomi  and Chicken lechon. 
-            In 2022, D’breeze Restaurant underwent an exciting transformation evolving into a unique fusion of Filipino and Arabic cuisines. Inspired by the growing cultural diversity in the area and the increasing popularity of Middle Eastern flavors and with the help of Co-Owner Mr. Hamad Almazrouei, an Emirati Local.D’breeze restaurant began to experiment with new local dishes that blended these two rich culinary tradition.</p>
-    </div>
-</section>
-<hr id="values">
-<section class="mission-vision">
-    <div class="column">
-        <div class="mission">
+    </section>
+
+    <hr id="values">
+    <section class="mission-vision">
+        <div class="column mission">
             <h2>Our Mission</h2>
             <p>To celebrate the rich culinary tradition of the Philippines and the Arabic world by offering a unique dining experience that blends authentic flavors, innovative dishes and warm hospitality.</p>
         </div>
-    </div>
-    <div class="column">
-        <div class="vission">
+        <div class="column vision">
             <h2>Our Vision</h2>
-            <p>To be a leading destination for culinary fusion in Roxas City, recognize for our commitment to quality, creativity, and cultural exchange. We aspire to inspire a deeper understanding of Filipino & Arabic cuisines, bringing people together through food that transcends borders. By embracing sustainability & supporting local communities.</p>
+            <p>To be a leading destination for culinary fusion in Roxas City, recognized for our commitment to quality, creativity, and cultural exchange. We aspire to inspire a deeper understanding of Filipino & Arabic cuisines, bringing people together through food that transcends borders. By embracing sustainability & supporting local communities.</p>
+        </div>
+    </section>
+
+    <!-- Our Chef Section -->
+    <hr id="chef">
+    <section class="chef-section">
+        <div class="chef-info">
+            <h2>Our Chef</h2>
+            <p>With 6 years of experience in the culinary world, <i>Rico Casanes</i> has honed their craft to a level of mastery. Their commitment to quality and innovation is evident in every dish they create. Explore their culinary journey and discover what makes them a true culinary master.</p>
+        </div>
+        <div class="chef-image">
+            <img src="images/chef.jpeg" alt="Our Chef">
+        </div>
+    </section>
+
+    <!-- Culinary Experience Section -->
+    <hr id="culinary">
+    <section class="centered-image-section culinary-experience">
+        <div class="centered-image">
+            <img src="images/culinaryex.jpg" alt="Another View">
+        </div>
+        <div class="centered-text">
+            <h2>The Culinary Experience</h2>
+            <p>Dining at D' Breeze is a delightful journey through two rich traditions, offering an experience that is both familiar and excitingly new. Warm Ambiance as you step inside, you're greeted by a warm inviting atmosphere that reflects the vibrant cultures of both Philippines and Middle East. The menu is a celebration of fusion, where classic Filipino dishes meet the bold spices and techniques of Arabic cuisine. The decor often features a blend of Filipino vibes & Arabic calligraphy, creating a cool yet exotic setting.</p>
+        </div>
+    </section>
+
+    <!-- Ambiance Section -->
+<hr id="ambiance">
+<section class="blurred-image-section ambiance">
+    <div class="blurred-image">
+        <img src="images/ambiance.png" alt="Blurred Background">
+        <div class="blurred-text1">
+            <h2>Ambiance of Filipino - Arabic Restaurant</h2>
+            <p>As you enter D' Breeze Restaurant, you are greeted by a cozy and welcoming vibe that seamlessly blends the aesthetic design of both cultures. The ambiance is imbued with the spirit of hospitality that is characteristic of Filipino & Arabic cultures. The staff are friendly & attentive, making every guest feel welcomed & valued, ensuring that your dining experience is as enjoyable as the food itself.</p>
         </div>
     </div>
 </section>
 
-        <!-- Our Chef Section -->
-        <hr id="chef">
-        <section class="chef-section">
-            <div class="chef-info">
-                <h2>Our Chef</h2>
-                <p>With 6 years of experience in the culinary world, [Chef's Name] has honed their craft to a level of mastery. Their commitment to quality and innovation is evident in every dish they create. Explore their culinary journey and discover what makes them a true culinary master.</p>
-            </div>
-            <div class="chef-image">
-                <img src="images/chef.jpeg" alt="Our Chef">
-            </div>
-        </section>
 
-        <!-- Another Image with Paragraph -->
-        <hr id="culinary">
-        <section class="centered-image-section">
-            <div class="centered-image">
-                <img src="images/breeze1.jpg" alt="Another View">
-            </div>
-            <div class="centered-text">
-                <h2>The Culinary Experience</h2>
-                <p>Dining at D' Breeze is a delightful journey through two rich traditions, oppening an experience that is both familiar and excitingly new. Warm Ambiance as you step inside, you're greeted by a warm inviting atmosphere that reflects the vibrant cultures of both Philippines and Middle East. The menus is a celebration of fusion, where classic Filipino dishes meet the bold spices and techniques of arabic cuisine. The decor often features a blend og Filipino Vibes & Arabic Calligraphy, creating a cool-yet exotic setting.</p>
-            </div>
-        </section>
-
-        <hr id="ambiance">
-        <section class="blurred-image-section">
-            <div class="blurred-image">
-                <img src="images/ambiance.png" alt="Blurred Background">
-                <div class="blurred-text">Ambiance of Filipino - Arabic Restaurant
-                    <p>As you enter D' Breeze Restaurant, you are greeted by a cozy and welcoming vibes that seamlessly blends the aesthetic design of both cultures. The ambiance is imbued with the spirit of hospitality that is characteristics of Filipino & Arabic cultures. The staff are friendly & attractive, making every guest feel welcomed & valued, ensuring that your dining experience is as enjoyables as the food itself.</p>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="footer">
-
-            <div class="social-lines-section">
-                <div class="social-lines">
-                    <div class="line"></div>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="https://www.messenger.com/t/100242331399704"><i
-                                class="fab fa-facebook-messenger"></i></a>
-                        <a
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="social-lines-section">
+            <div class="social-lines">
+                <div class="line"></div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
+<a
                             href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
                                 class="fab fa-instagram"></i></a>
                     </div>

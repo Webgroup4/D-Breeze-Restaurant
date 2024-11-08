@@ -223,14 +223,15 @@ header {
   }
 
 
-
-
-
-
-
-hr {
+  hr {
     border: none;  
 }
+
+
+
+
+
+/* Full Image Section */
 .full-image {
     position: relative;
     width: 100%;
@@ -244,49 +245,154 @@ hr {
     object-fit: cover;
 }
 
+/* Blurred Text Inside the Image */
 .blurred-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #f9f2f2;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 1em;
-    padding: 20px;
-    font-size: 2em; /* Base font size */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better text visibility */
+    border-radius: 20px;
+    padding: 15px;  /* Reduced padding for smaller size */
+    font-size: 5.5em;  /* Reduced font size */
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 100;
+    max-width: 90%; /* Max width for text to fit within the screen */
+}
+
+
+.blurred-text p {
     font-family: Asul;
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    text-align: justify;
+    text-indent: 20px;  /* Reduced text-indent further */
+    margin: 0 1rem;  /* Reduced margin for better fit */
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+/* Responsive for Very Small Devices (<400px) */
+@media (max-width: 400px) {
+    .full-image {
+        height: 50vh; /* Reduce height for very small screens */
+    }
+
     .blurred-text {
-        font-size: 1em; /* Slightly smaller text */
-        padding: 15px;
+        width: 90%; /* Maximize text box width */
+        padding: 0.6rem; /* Adjust padding */
+    }
+
+    .blurred-text p {
+        font-size: 0.9rem; /* Smaller font size for better fit */
+        line-height: 1.3; /* Adjust line height */
+        margin: 0 0.5rem; /* Reduce margin */
     }
 }
 
-@media (max-width: 992px) {
+/* Responsive for Small Devices (400px to 500px) */
+@media (min-width: 400px) and (max-width: 500px) {
+    .full-image {
+        height: 60vh; /* Adjust height for small screens */
+    }
+
     .blurred-text {
-        font-size: 1.5em; /* Further reduce text size */
-        padding: 10px;
+        width: 90%; /* Maximize text box width */
+        padding: 1rem; /* Adjust padding for better text fit */
+    }
+
+    .blurred-text p {
+        font-size: 1.2rem; /* Adjust font size for better readability */
+        line-height: 1.4; /* Adjust line height for better spacing */
+        margin: 0 1rem; /* Add some margin for spacing */
     }
 }
 
-@media (max-width: 768px) {
+/* Responsive for Medium Devices (500px to 600px) */
+@media (min-width: 500px) and (max-width: 600px) {
+    .full-image {
+        height: 70vh; /* Slightly taller image on medium screens */
+    }
+
     .blurred-text {
-        font-size: 1.2em; /* Even smaller text */
-        padding: 8px;
+        width: 85%; /* Adjust text box width */
+        padding: 1.2rem; /* Adjust padding */
+    }
+
+    .blurred-text p {
+        font-size: 1.3rem; /* Slightly larger font size */
+        line-height: 1.5; /* Adjust line height for better readability */
+        margin: 0 1rem; /* Keep margins consistent */
     }
 }
 
-@media (max-width: 576px) {
+/* Responsive for Larger Devices (600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    .full-image {
+        height: 80vh; /* Make the image a bit taller on larger devices */
+    }
+
     .blurred-text {
-        font-size: 1em; /* Smallest text for mobile */
-        padding: 5px;
+        width: 80%; /* Adjust width for larger screens */
+        padding: 1.5rem; /* Adjust padding for more spacing */
+    }
+
+    .blurred-text p {
+        font-size: 1.5rem; /* Larger font size for readability */
+        line-height: 1.6; /* More space between lines for larger text */
+        margin: 0 2rem; /* Keep consistent margin */
     }
 }
+
+/* Responsive for Medium to Large Devices (900px to 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+    .full-image {
+        height: 90vh; /* Adjust for larger screens */
+    }
+
+    .blurred-text {
+        width: 70%; /* Adjust text box width */
+        padding: 2rem; /* Increase padding for more breathing space */
+    }
+
+    .blurred-text p {
+        font-size: 1.8rem; /* Larger text for readability */
+        line-height: 1.8; /* Adjust line height for better spacing */
+        margin: 0 2.5rem; /* Slightly larger margins */
+    }
+}
+
+/* Responsive for Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+    .full-image {
+        height: 100vh; /* Full height for larger screens */
+    }
+
+    .blurred-text {
+        width: 60%; /* Reduce text box width for large screens */
+        padding: 2.5rem; /* Padding adjustments */
+    }
+
+    .blurred-text p {
+        font-size: 2rem; /* Even larger text for readability */
+        line-height: 2; /* More line height for spacious text */
+        margin: 0 3rem; /* Even larger margins for visual appeal */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -295,74 +401,60 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #fff9c4;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .our-story-images {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 10px; /* Space between images */
-    flex: 1; /* Allow images to grow */
-}
-
-.our-story-images img {
-    width: 100%; /* Full width for the grid cells */
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.our-story-images img:hover {
-    transform: scale(1.05); /* Slightly reduce hover scale */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    flex: 1;
 }
 
 .our-story-text {
     flex: 1;
-    padding-left: 20px;
-   
-    
 }
+
+
+
+
 
 .our-story-text h2 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 15px;
     color: #f57f17;
+    margin-right: -50px;
 }
 
 .our-story-text p {
     font-size: 1.1em;
     text-align: justify;
     text-indent: 60px;
+    margin-left: 60px;
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .our-story-section {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 20px; /* Adjust padding */
+        flex-direction: column;
+        padding: 20px;
     }
 
     .our-story-images {
-        grid-template-columns: repeat(2, 1fr); /* Maintain two columns */
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
     }
 
     .our-story-images img {
-        width: 90%; /* Adjust image size for smaller screens */
-        margin: auto; /* Center images */
+        width: 90%;
+        margin: auto;
     }
 
     .our-story-text {
-        padding-left: 0; /* Remove left padding */
-        text-align: center; /* Center text */
+        padding-left: 0;
+        text-align: center;
     }
 }
-
 .mission-vision {
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -550,9 +642,7 @@ hr {
 
 
 
-
-
-
+/* Blurred Image Section */
 .blurred-image-section {
     position: relative;
     padding: 40px 20px;
@@ -562,39 +652,78 @@ hr {
 
 .blurred-image img {
     width: 100%;
-    height: 30%;
+    height: auto; /* Ensure image scales correctly */
     border-radius: 8px;
-   
+    display: block; /* Remove extra space below the image */
 }
 
-.blurred-text {
+/* Text inside the image with black overlay */
+.blurred-text1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #f9f2f2;
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust opacity to desired level */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly lighter black overlay */
     border-radius: 20px;
-    padding: 20px; /* Add padding for better readability */
-    font-size: 2em;
+    padding: 20px;
+    font-size: 1.5em;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 100; /* Ensure it appears above other elements */
+    z-index: 100;
+    width: 90%; /* Make text width responsive */
 }
-.blurred-text p{
-    font-family: Asul;
-    font-size: 20px;
+
+.blurred-text1 h2 {
+    font-size: 2.5em; /* Slightly larger heading */
+    margin-bottom: 15px;
+}
+
+.blurred-text1 p {
+    font-family: Asul, sans-serif;
+    font-size: 18px;
     text-align: justify;
     text-indent: 60px;
 }
 
-@media(max-width: 900px) {
-    .blurred-text p {
-        width: 400px;
-        
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .blurred-text1 {
+        font-size: 1.2em;
+        padding: 15px;
+        width: 80%;
+    }
+    
+    .blurred-text1 h2 {
+        font-size: 2em;
     }
 
+    .blurred-text1 p {
+        font-size: 16px;
+        text-align: justify;
+        text-indent: 20px;
+    }
 }
+
+@media (max-width: 600px) {
+    .blurred-text1 {
+        font-size: 1em;
+        width: 90%;
+    }
+    
+    .blurred-text1 h2 {
+        font-size: 1.5em;
+    }
+
+    .blurred-text1 p {
+        font-size: 14px;
+        text-indent: 0;
+    }
+}
+
+
+
+
 
 .footer {
     padding: 5px 0;
@@ -742,3 +871,78 @@ hr {
 .social-icons a:hover {
     opacity: 0.9;
 }
+
+
+
+.our-story-section {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center align items */
+    padding: 20px; /* Add some padding */
+}
+
+.slider {
+    position: relative;
+    width: 100%; /* Set the slider width to 100% */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+}
+
+.slide img {
+    width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image horizontally */
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px; /* Add horizontal padding */
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 0 10px; /* Adjust margin for smaller screens */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.our-story-text {
+    max-width: 800px; /* Set a maximum width for the text */
+    margin-top: 20px; /* Add some space between the slider and text */
+    text-align: center;
+    margin-right: 50px;
+
+}
+
+@media (min-width: 768px) {
+    .our-story-section {
+        flex-direction: row; /* Change to row on larger screens */
+        justify-content: space-between; /* Space out slider and text */
+    }
+
+    .slider {
+        max-width: 50%; /* Slider takes half the width on larger screens */
+    }
+
+    .our-story-text {
+        max-width: 40%; /* Text takes less width on larger screens */
+        margin-top: 0; /* Remove top margin */
+    }
+}
+

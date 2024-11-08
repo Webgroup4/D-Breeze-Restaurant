@@ -328,21 +328,36 @@ h1 {
 .dish-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Distribute items evenly across the row */
-    gap: 20px; /* Add gap between images */
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
 }
 
 .dish-item {
     display: flex;
-    flex-direction: column; /* Stack image vertically */
-    align-items: center; /* Center items horizontally */
-    width: calc(23% - 20px); /* Maintain width */
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 20px); /* Three items per row */
     text-align: center;
     transition: transform 0.2s;
     background-color: white;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dish-item img {
+    width: 100%; /* Make the image take full width of its container */
+    height: auto; /* Let the height adjust proportionally to the width */
+    max-height: 300px; /* Set a max height to make images bigger */
+    object-fit: cover; /* Ensure image covers the container without distortion */
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.dish-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 .dish-item p {
@@ -358,16 +373,14 @@ h1 {
 
 
 .dish-item img {
-    width: 100%; /* Images fill the dish item */
-    height: 80%;
+    width: 100%; /* Make the image take full width of its container */
+    height: 100%; /* Ensure the image takes up the full height of its container */
+    max-height: 250px; /* Increase the max height for slightly larger images */
+    object-fit: cover; /* Make the image fit the box without distortion */
     border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.dish-item:hover img {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
 
 .preview-button {
     background-color: #ff9800;
@@ -382,7 +395,20 @@ h1 {
     background-color: #e68900;
 }
 
+@media (max-width: 768px) {
+    .dish-item {
+        width: calc(50% - 20px); /* Two items per row on medium screens */
+    }
+}
 
+@media (max-width: 480px) {
+    .dish-item {
+        width: 100%; /* One item per row on mobile */
+    }
+    .dish-item img {
+        max-height: 200px; /* Adjust max height for mobile */
+    }
+}
 /* Modal Background */
 .preview-modal {
     position: fixed;
