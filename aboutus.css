@@ -243,139 +243,50 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: opacity(0.8);
 }
 
-/* Blurred Text Inside the Image */
 .blurred-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #f9f2f2;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better text visibility */
-    border-radius: 20px;
-    padding: 15px;  /* Reduced padding for smaller size */
-    font-size: 5.5em;  /* Reduced font size */
+    background-color:rgb(0, 0, 0, 0.9);
+    border-radius: 1em;
+    padding: 20px;
+    font-size: 2em; /* Base font size */
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 100;
-    max-width: 90%; /* Max width for text to fit within the screen */
-}
-
-
-.blurred-text p {
     font-family: Asul;
-    font-size: 0.9rem;  /* Slightly smaller font size */
-    text-align: justify;
-    text-indent: 20px;  /* Reduced text-indent further */
-    margin: 0 1rem;  /* Reduced margin for better fit */
 }
 
-/* Responsive for Very Small Devices (<400px) */
-@media (max-width: 400px) {
-    .full-image {
-        height: 50vh; /* Reduce height for very small screens */
-    }
-
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
     .blurred-text {
-        width: 90%; /* Maximize text box width */
-        padding: 0.6rem; /* Adjust padding */
-    }
-
-    .blurred-text p {
-        font-size: 0.9rem; /* Smaller font size for better fit */
-        line-height: 1.3; /* Adjust line height */
-        margin: 0 0.5rem; /* Reduce margin */
+        font-size: 1em; /* Slightly smaller text */
+        padding: 15px;
     }
 }
 
-/* Responsive for Small Devices (400px to 500px) */
-@media (min-width: 400px) and (max-width: 500px) {
-    .full-image {
-        height: 60vh; /* Adjust height for small screens */
-    }
-
+@media (max-width: 992px) {
     .blurred-text {
-        width: 90%; /* Maximize text box width */
-        padding: 1rem; /* Adjust padding for better text fit */
-    }
-
-    .blurred-text p {
-        font-size: 1.2rem; /* Adjust font size for better readability */
-        line-height: 1.4; /* Adjust line height for better spacing */
-        margin: 0 1rem; /* Add some margin for spacing */
+        font-size: 1.5em; /* Further reduce text size */
+        padding: 10px;
     }
 }
 
-/* Responsive for Medium Devices (500px to 600px) */
-@media (min-width: 500px) and (max-width: 600px) {
-    .full-image {
-        height: 70vh; /* Slightly taller image on medium screens */
-    }
-
+@media (max-width: 768px) {
     .blurred-text {
-        width: 85%; /* Adjust text box width */
-        padding: 1.2rem; /* Adjust padding */
-    }
-
-    .blurred-text p {
-        font-size: 1.3rem; /* Slightly larger font size */
-        line-height: 1.5; /* Adjust line height for better readability */
-        margin: 0 1rem; /* Keep margins consistent */
+        font-size: 1.2em; /* Even smaller text */
+        padding: 8px;
     }
 }
 
-/* Responsive for Larger Devices (600px to 900px) */
-@media (min-width: 600px) and (max-width: 900px) {
-    .full-image {
-        height: 80vh; /* Make the image a bit taller on larger devices */
-    }
-
+@media (max-width: 576px) {
     .blurred-text {
-        width: 80%; /* Adjust width for larger screens */
-        padding: 1.5rem; /* Adjust padding for more spacing */
-    }
-
-    .blurred-text p {
-        font-size: 1.5rem; /* Larger font size for readability */
-        line-height: 1.6; /* More space between lines for larger text */
-        margin: 0 2rem; /* Keep consistent margin */
-    }
-}
-
-/* Responsive for Medium to Large Devices (900px to 1200px) */
-@media (min-width: 900px) and (max-width: 1200px) {
-    .full-image {
-        height: 90vh; /* Adjust for larger screens */
-    }
-
-    .blurred-text {
-        width: 70%; /* Adjust text box width */
-        padding: 2rem; /* Increase padding for more breathing space */
-    }
-
-    .blurred-text p {
-        font-size: 1.8rem; /* Larger text for readability */
-        line-height: 1.8; /* Adjust line height for better spacing */
-        margin: 0 2.5rem; /* Slightly larger margins */
-    }
-}
-
-/* Responsive for Extra Large Devices (1200px and up) */
-@media (min-width: 1200px) {
-    .full-image {
-        height: 100vh; /* Full height for larger screens */
-    }
-
-    .blurred-text {
-        width: 60%; /* Reduce text box width for large screens */
-        padding: 2.5rem; /* Padding adjustments */
-    }
-
-    .blurred-text p {
-        font-size: 2rem; /* Even larger text for readability */
-        line-height: 2; /* More line height for spacious text */
-        margin: 0 3rem; /* Even larger margins for visual appeal */
+        font-size: 1.2em; /* Smallest text for mobile */
+        padding: 5px;
     }
 }
 
