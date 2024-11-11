@@ -235,69 +235,13 @@ header {
   hr {
     border: none;  
 }
-.full-image {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
 
-.full-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: opacity(0.8);
-}
-
-.blurred-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f9f2f2;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 1em;
-    padding: 20px;
-    font-size: 2em; /* Base font size */
-    text-align: center;
-    z-index: 100;
-    font-family: Asul;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    .blurred-text {
-        font-size: 1em; /* Slightly smaller text */
-        padding: 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    .blurred-text {
-        font-size: 1em; /* Further reduce text size */
-        padding: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .blurred-text {
-        font-size: 1.2em; /* Even smaller text */
-        padding: 8px;
-    }
-}
-
-@media (max-width: 576px) {
-    .blurred-text {
-        font-size: 1.2em; /* Smallest text for mobile */
-        padding: 5px;
-    }
-}
 
 /* Featured Dishes Section */
 .best-seller {
     padding: 20px;
     background: linear-gradient(135deg, #fff9c4, #fff3e0); /* Light yellow to cream gradient */
-    margin: 4% 8%;
+    margin: 10% 8%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
