@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 
 
-
+ <!-- Body -->
 <body>
+     <!-- header -->
     <header>
         <nav>
             <ul class="nav-bar">
@@ -38,16 +38,13 @@
                     <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="contact.html">CONTACT US</a></li>
                     <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
-
                     <div class="xContainer">
                         <div class="socialIcons">
                             <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
                                     class="fa-brands fa-facebook"></i>
-                                <a href="https://www.messenger.com/t/100242331399704"><i
+                            <a href="https://www.messenger.com/t/100242331399704"><i
                                         class="fa-brands fa-twitter"></i></a>
-                                <a
-                                    href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
-                                        class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </span>
@@ -57,13 +54,7 @@
             </ul>
         </nav>
     </header>
-
-
-
-
-    <body>
-       
-
+    <!--end header -->
         <!-- Contact Form Section -->
         <div class="contact-container">
             <h3 class="send-message">SEND US A MESSAGE</h3>
@@ -84,13 +75,14 @@
                 <div class="response-message" id="response-message"></div>
             </form>
         </div>
-    
+        <!-- End of Contact Form Section  -->
 
         <!-- Get in Touch Section -->
         <div class="get-in-touch">
             <div class="get-in-touch-left">
                 <h3>Get in Touch</h3>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Head Office: Roxas Avenue, Roxas City Capiz</strong></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Head Office: Roxas Avenue, Roxas City Capiz</strong>
+                </p>
                 <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> 09076465700</p>
                 <p><i class="fas fa-envelope"></i> <strong>Email:</strong> mcc.capapas@gmail.com</p>
             </div>
@@ -99,9 +91,10 @@
                 <i class="far fa-clock"></i>
                 <p>Monday - Sunday: </p>
                 <p>9:30 AM - 9:00 PM</p>
-                
+
             </div>
         </div>
+        <!-- end Get in Touch Section -->
 
         <!-- Location Section with Map -->
         <div class="location-section">
@@ -110,10 +103,69 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.3419986046105!2d122.75766390309842!3d11.517962100246711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a5f52e31e4924f%3A0x199d9934326ee39c!2sD%27Breeze%20Restaurant!5e0!3m2!1sen!2sph!4v1729520242567!5m2!1sen!2sph"
                 width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+        <!-- end Location Section with Map -->
 
+        <!-- Feedback Form -->
+        <form id="feedbackForm">
+            <h1>Feedback Form</h1>
+            <label for="rating">Rating:</label>
+            <div class="stars" id="starRating">
+                <i data-value="1">&#9733;</i>
+                <i data-value="2">&#9733;</i>
+                <i data-value="3">&#9733;</i>
+                <i data-value="4">&#9733;</i>
+                <i data-value="5">&#9733;</i>
+            </div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" cols="40" placeholder="Write your feedback here..."></textarea>
+            <button class="feedbackbtn" type="submit">Submit Feedback</button>
+        </form>
 
+        <!-- Feedback message div -->
+        <div id="feedbackMessage"></div>
+        <div id="userMessage"></div>
+
+        <!-- Feedback display section -->
+        <div class="feedback-container" id="feedbackContainer">
+            <h1>Feedbacks</h1>
+            <div class="feedback-item">
+                <i class="fas fa-user"></i>
+                <span class="name">Ryan Sihiyon <span class="rating">★★★★★</span></span>
+                <p>Food was good and reasonably priced. The place was warm though. Service was also great. The main
+                    course arrived first and appetizers last. Their menu is mix of Indian, Chinese, Filipino, and
+                    Italian dishes. They should've focused on thier Indian menu. </p>
+            </div>
+            <div class="feedback-item">
+                <i class="fas fa-user"></i>
+                <span class="name">Joey Ilag <span class="rating">★★★★★</span></span>
+                <p>The place is conveniently located before or after a long travel when you're leaving or approaching in
+                    Roxas. Menus are served fresh, hot and affordable too-roasted chicken, special lomi, batchoy, milk
+                    tea and more</p>
+            </div>
+            <div class="feedback-item">
+                <i class="fas fa-user"></i>
+                <span class="name">Ali Arslan <span class="rating">★★★★★</span></span>
+                <p>The place is great and lovely reminds me of a typical middle eastern restaurant. Good food menu. The
+                    place offer array choices and offers vegetarian samosa fries and falafel. Place have friendly-staff
+                    and good parking space. Hope to dine again soon</p>
+            </div>
+            <div class="feedback-item">
+                <i class="fas fa-user"></i>
+                <span class="name">Red Dot <br><span class="rating">★★★★☆</span></span>
+                <p>Great location for vegetarian options. Food was great quality.</p>
+            </div>
+            <div class="feedback-item">
+                <i class="fas fa-user"></i>
+                <span class="name">Mary Noqueira <br><span class="rating">★★★★★</span></span>
+                <p>Nice place, nice food...</p>
+            </div>
+        </div>
+        <!-- Feedback Form -->
+
+        <!-- Footer -->
         <section class="footer">
-
             <div class="social-lines-section">
                 <div class="social-lines">
                     <div class="line"></div>
@@ -122,8 +174,7 @@
                                 class="fab fa-facebook"></i></a>
                         <a href="https://www.messenger.com/t/100242331399704"><i
                                 class="fab fa-facebook-messenger"></i></a>
-                        <a
-                            href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
+                        <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
                     <div class="line"></div>
@@ -138,14 +189,10 @@
                 </li>
             </ul>
 
-
             <p class="copyright">
                 ©2024 D'Breeze Restaurant. All right Reserved.
             </p>
-
-
         </section>
-
         <script src="contact.js"></script>
     </body>
 
