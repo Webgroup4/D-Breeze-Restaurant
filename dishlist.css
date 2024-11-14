@@ -190,6 +190,52 @@ header {
 
 }
 
+/* dropdown */
+.dropdown {
+    display: none;
+    /* Hide the dropdown by default */
+    position: absolute;
+    background-color: yellow;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 20px;
+    margin-left: -50px;
+
+}
+@media (max-width: 768px) {
+    .dropdown {
+        display: none;
+        background-color: none;
+        box-shadow: none;
+    }
+    .dropdown li a{
+        display: none;
+    }
+}
+
+
+.dropdown li {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    /* Add a subtle border */
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+    /* Remove border from the last item */
+}
+
+.dropdown li a {
+    color: orangered;
+    text-decoration: none;
+    /* Remove default link underline */
+}
+
+/* Show the dropdown on hover */
+li:hover .dropdown {
+    display: block;
+}
 
 
 
@@ -207,7 +253,8 @@ main {
 
 
 .container {
-    max-width: 1400px; /* Increase the container width */
+    max-width: 1400px;
+    /* Increase the container width */
     margin: 20px auto;
     padding: 20px;
     background-color: #f8db69;
@@ -222,19 +269,27 @@ main {
 
 h1 {
     text-align: center;
-    font-size: 2.5em; /* Set font size to 2.5em */
-    color: orange; /* Change color to orange */
+    font-size: 2.5em;
+    /* Set font size to 2.5em */
+    color: orange;
+    /* Change color to orange */
 }
 
 
 .intro-text {
-    text-align: justify;         /* Justify text alignment */
-    font-size: 20px;             /* Set font size */
-    line-height: 1.6;            /* Add line height for readability */
-    text-indent: 10%;            /* Indent the first line */
-    margin: 10px 0 20px;         /* Add space above and below */
-    padding: 5px 0;              /* Subtle padding for extra breathing room */
-    color:#333;
+    text-align: justify;
+    /* Justify text alignment */
+    font-size: 20px;
+    /* Set font size */
+    line-height: 1.6;
+    /* Add line height for readability */
+    text-indent: 10%;
+    /* Indent the first line */
+    margin: 10px 0 20px;
+    /* Add space above and below */
+    padding: 5px 0;
+    /* Subtle padding for extra breathing room */
+    color: #333;
     font-family: asul;
 }
 
@@ -248,7 +303,8 @@ h1 {
 }
 
 .categories {
-    position: relative; /* Enable absolute positioning for the icon */
+    position: relative;
+    /* Enable absolute positioning for the icon */
     width: 20%;
 }
 
@@ -261,56 +317,75 @@ h1 {
 .search input {
     padding: 8px;
     width: 100%;
-    border-radius: 12px; /* Add rounded corners with a radius */
-    border: 2px solid #ccc; /* Add a solid border */
-    box-shadow: orangered; /* Optional shadow */
+    border-radius: 12px;
+    /* Add rounded corners with a radius */
+    border: 2px solid #ccc;
+    /* Add a solid border */
+    box-shadow: orangered;
+    /* Optional shadow */
 }
 
 
 .search {
-    position: relative; /* Enable absolute positioning for the icon */
+    position: relative;
+    /* Enable absolute positioning for the icon */
 }
 
 .search h3 {
     color: orangered;
     margin-bottom: 5px;
 }
+
 .search input {
-    padding: 10px; /* Decrease padding for a shorter height */
-    width: 100%; /* Make it full width within the parent */
-    border-radius: 15px; /* Slightly rounded corners for an oblong shape */
-    border: 1px solid orange; /* Optional: add a border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
+    padding: 10px;
+    /* Decrease padding for a shorter height */
+    width: 100%;
+    /* Make it full width within the parent */
+    border-radius: 15px;
+    /* Slightly rounded corners for an oblong shape */
+    border: 1px solid orange;
+    /* Optional: add a border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: add a shadow */
     margin-left: -30px;
     padding-right: 30px;
 }
 
 
 .search-container {
-    position: relative; /* Enables absolute positioning for the icon */
+    position: relative;
+    /* Enables absolute positioning for the icon */
 }
 
 .search-icon {
     position: absolute;
     top: 50%;
-    right: 10px; /* Position on the right */
-    transform: translateY(-50%); /* Center vertically */
-    color: orange; /* Change icon color to orange */
-    pointer-events: none; /* Prevents icon from blocking input clicks */
+    right: 10px;
+    /* Position on the right */
+    transform: translateY(-50%);
+    /* Center vertically */
+    color: orange;
+    /* Change icon color to orange */
+    pointer-events: none;
+    /* Prevents icon from blocking input clicks */
 }
 
 .search-icon {
     position: absolute;
     top: 50%;
-    right: -5px; /* Adjusted to be slightly further right */
-    transform: translateY(-50%); /* Center vertically */
-    color: orange; /* Icon color remains orange */
-    pointer-events: none; /* Prevents icon from blocking input clicks */
+    right: -5px;
+    /* Adjusted to be slightly further right */
+    transform: translateY(-50%);
+    /* Center vertically */
+    color: orange;
+    /* Icon color remains orange */
+    pointer-events: none;
+    /* Prevents icon from blocking input clicks */
 }
 
 
 
-.container h1{
+.container h1 {
     margin-top: 100px;
 }
 
@@ -329,14 +404,16 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; /* Space between items */
+    gap: 20px;
+    /* Space between items */
 }
 
 .dish-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(33.33% - 20px); /* Three items per row */
+    width: calc(33.33% - 20px);
+    /* Three items per row */
     text-align: center;
     transition: transform 0.2s;
     background-color: white;
@@ -346,26 +423,34 @@ h1 {
 }
 
 .dish-item img {
-    width: 100%; /* Make the image take full width of its container */
-    height: auto; /* Let the height adjust proportionally to the width */
-    max-height: 300px; /* Set a max height to make images bigger */
-    object-fit: cover; /* Ensure image covers the container without distortion */
+    width: 100%;
+    /* Make the image take full width of its container */
+    height: auto;
+    /* Let the height adjust proportionally to the width */
+    max-height: 300px;
+    /* Set a max height to make images bigger */
+    object-fit: cover;
+    /* Ensure image covers the container without distortion */
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 
 .dish-item:hover img {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
 }
 
 .dish-item p {
-    margin: 5px 0; /* Space between button and text */
+    margin: 5px 0;
+    /* Space between button and text */
 }
 
 .dish-item .preview-button {
-    margin-bottom: 5px; /* Space below button */
+    margin-bottom: 5px;
+    /* Space below button */
     /* Additional styles for the button can be added here */
 }
 
@@ -373,10 +458,14 @@ h1 {
 
 
 .dish-item img {
-    width: 100%; /* Make the image take full width of its container */
-    height: 100%; /* Ensure the image takes up the full height of its container */
-    max-height: 250px; /* Increase the max height for slightly larger images */
-    object-fit: cover; /* Make the image fit the box without distortion */
+    width: 100%;
+    /* Make the image take full width of its container */
+    height: 100%;
+    /* Ensure the image takes up the full height of its container */
+    max-height: 250px;
+    /* Increase the max height for slightly larger images */
+    object-fit: cover;
+    /* Make the image fit the box without distortion */
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -397,18 +486,23 @@ h1 {
 
 @media (max-width: 768px) {
     .dish-item {
-        width: calc(50% - 20px); /* Two items per row on medium screens */
+        width: calc(50% - 20px);
+        /* Two items per row on medium screens */
     }
 }
 
 @media (max-width: 480px) {
     .dish-item {
-        width: 100%; /* One item per row on mobile */
+        width: 100%;
+        /* One item per row on mobile */
     }
+
     .dish-item img {
-        max-height: 200px; /* Adjust max height for mobile */
+        max-height: 200px;
+        /* Adjust max height for mobile */
     }
 }
+
 /* Modal Background */
 .preview-modal {
     position: fixed;
@@ -421,7 +515,8 @@ h1 {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    backdrop-filter: blur(8px); /* Increased blur effect */
+    backdrop-filter: blur(8px);
+    /* Increased blur effect */
 }
 
 /* Modal Content */
@@ -432,7 +527,8 @@ h1 {
     text-align: center;
     max-width: 600px;
     width: 90%;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+    /* Enhanced shadow */
     position: relative;
 }
 
@@ -442,7 +538,8 @@ h1 {
     height: 500px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow around image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow around image */
 }
 
 /* Close Button Styles */
@@ -465,9 +562,12 @@ h1 {
     color: #333;
     margin-top: 15px;
     padding: 0 10px;
-    line-height: 1.6; /* Improved line spacing */
-    text-align: justify; /* Justified text for a cleaner look */
-    text-decoration: none; /* Ensures no underline */
+    line-height: 1.6;
+    /* Improved line spacing */
+    text-align: justify;
+    /* Justified text for a cleaner look */
+    text-decoration: none;
+    /* Ensures no underline */
 }
 
 .footer {
@@ -594,6 +694,7 @@ h1 {
     color: red;
     transform: scale(1.1);
 }
+
 .line {
     width: 600px;
     height: 2px;

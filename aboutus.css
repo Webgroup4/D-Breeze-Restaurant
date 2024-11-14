@@ -192,39 +192,53 @@ header {
 
 /* dropdown */
 .dropdown {
-    display: none; /* Hide the dropdown by default */
-    position: absolute; 
+    display: none;
+    /* Hide the dropdown by default */
+    position: absolute;
     background-color: yellow;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
-    z-index: 1; 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
     border-radius: 20px;
     margin-left: -50px;
-    
-  }
-  
-  .dropdown li { 
+
+}
+@media (max-width: 768px) {
+    .dropdown {
+        display: none;
+        background-color: none;
+        box-shadow: none;
+    }
+    .dropdown li a{
+        display: none;
+    }
+}
+
+.dropdown li {
     text-align: center;
     padding: 5px;
-    border-bottom: 1px solid #ddd; /* Add a subtle border */
-  }
-  
-  .dropdown li:last-child {
-    border-bottom: none; /* Remove border from the last item */
-  }
-  
-  .dropdown li a {
+    border-bottom: 1px solid #ddd;
+    /* Add a subtle border */
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+    /* Remove border from the last item */
+}
+
+.dropdown li a {
     color: orangered;
-    text-decoration: none; /* Remove default link underline */
-  }
-  
-  /* Show the dropdown on hover */
-  li:hover .dropdown {
+    text-decoration: none;
+    /* Remove default link underline */
+}
+
+/* Show the dropdown on hover */
+li:hover .dropdown {
     display: block;
-  }
+}
 
 
-  hr {
-    border: none;  
+hr {
+    border: none;
 }
 
 
@@ -252,10 +266,11 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #f9f2f2;
-    background-color:rgb(0, 0, 0, 0.9);
+    background-color: rgb(0, 0, 0, 0.9);
     border-radius: 1em;
     padding: 20px;
-    font-size: 2em; /* Base font size */
+    font-size: 2em;
+    /* Base font size */
     text-align: center;
     z-index: 100;
     font-family: Asul;
@@ -264,28 +279,32 @@ header {
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .blurred-text {
-        font-size: 1em; /* Slightly smaller text */
+        font-size: 1em;
+        /* Slightly smaller text */
         padding: 15px;
     }
 }
 
 @media (max-width: 992px) {
     .blurred-text {
-        font-size: 1.5em; /* Further reduce text size */
+        font-size: 1.5em;
+        /* Further reduce text size */
         padding: 10px;
     }
 }
 
 @media (max-width: 768px) {
     .blurred-text {
-        font-size: 1.2em; /* Even smaller text */
+        font-size: 1.2em;
+        /* Even smaller text */
         padding: 8px;
     }
 }
 
 @media (max-width: 576px) {
     .blurred-text {
-        font-size: 1.2em; /* Smallest text for mobile */
+        font-size: 1.2em;
+        /* Smallest text for mobile */
         padding: 5px;
     }
 }
@@ -366,39 +385,40 @@ header {
         text-align: center;
     }
 }
+
 .mission-vision {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px; 
-    padding: 20px; 
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
     margin: 8%;
-  }
-  
-  .column {
+}
+
+.column {
     background-color: #fff9c4;
     padding: 20px;
-    border-radius: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .column h2 {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 15px;
     color: #f57f17;
-  }
-  
-  .column p {
+}
+
+.column p {
     font-size: 1.1em;
     text-align: justify;
     text-indent: 60px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .mission-vision {
-      grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
-  }
+}
 
 /* Our Chef Section */
 .chef-section {
@@ -451,23 +471,31 @@ header {
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .chef-section {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 20px; /* Adjust padding */
+        flex-direction: column;
+        /* Stack elements vertically */
+        padding: 20px;
+        /* Adjust padding */
     }
 
     .chef-info {
-        margin-right: 0; /* Remove right margin */
-        text-align: center; /* Center text for smaller screens */
+        margin-right: 0;
+        /* Remove right margin */
+        text-align: center;
+        /* Center text for smaller screens */
     }
 
     .chef-image {
-        margin-top: 20px; /* Add space above the image */
-        flex: 1; /* Allow image to grow */
+        margin-top: 20px;
+        /* Add space above the image */
+        flex: 1;
+        /* Allow image to grow */
     }
 
     .chef-image img {
-        width: 100%; /* Make image full width */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        /* Make image full width */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 }
 
@@ -508,42 +536,52 @@ header {
     text-align: center;
     padding: 0 20px;
     font-size: 1.1em;
-    
+
 }
-.centered-text p{
+
+.centered-text p {
     font-size: 1.1em;
     text-align: justify;
     text-indent: 60px;
-    
+
 }
-.centered-text h2{
+
+.centered-text h2 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 15px;
     color: #f57f17;
-    
+
 }
 
 /* Media Query for Centered Image Section on Smaller Screens */
 @media (max-width: 768px) {
     .centered-image-section {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 20px; /* Adjust padding */
-        text-align: center; /* Center align text */
+        flex-direction: column;
+        /* Stack elements vertically */
+        padding: 20px;
+        /* Adjust padding */
+        text-align: center;
+        /* Center align text */
     }
 
     .centered-image {
-        margin-bottom: 20px; /* Space below the image */
+        margin-bottom: 20px;
+        /* Space below the image */
     }
 
     .centered-image img {
-        width: 100%; /* Make image full width */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        /* Make image full width */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 
     .centered-text {
-        padding: 0; /* Remove padding */
-        font-size: 1em; /* Adjust font size for better readability */
+        padding: 0;
+        /* Remove padding */
+        font-size: 1em;
+        /* Adjust font size for better readability */
     }
 }
 
@@ -563,9 +601,11 @@ header {
 
 .blurred-image img {
     width: 100%;
-    height: auto; /* Ensure image scales correctly */
+    height: auto;
+    /* Ensure image scales correctly */
     border-radius: 8px;
-    display: block; /* Remove extra space below the image */
+    display: block;
+    /* Remove extra space below the image */
 }
 
 /* Text inside the image with black overlay */
@@ -575,18 +615,21 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #f9f2f2;
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly lighter black overlay */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Slightly lighter black overlay */
     border-radius: 20px;
     padding: 20px;
     font-size: 1.5em;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 100;
-    width: 90%; /* Make text width responsive */
+    width: 90%;
+    /* Make text width responsive */
 }
 
 .blurred-text1 h2 {
-    font-size: 2.5em; /* Slightly larger heading */
+    font-size: 2.5em;
+    /* Slightly larger heading */
     margin-bottom: 15px;
 }
 
@@ -604,7 +647,7 @@ header {
         padding: 15px;
         width: 80%;
     }
-    
+
     .blurred-text1 h2 {
         font-size: 2em;
     }
@@ -621,7 +664,7 @@ header {
         font-size: 1em;
         width: 90%;
     }
-    
+
     .blurred-text1 h2 {
         font-size: 1.5em;
     }
@@ -760,12 +803,14 @@ header {
     background-color: #000;
     /* Change the color to match your design */
 }
+
 @media(max-width: 1500px) {
     .line {
         display: none;
     }
 
 }
+
 .social-icons a {
     font-size: 24px;
     color: orangered;
@@ -787,27 +832,36 @@ header {
 
 .our-story-section {
     display: flex;
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: center; /* Center align items */
-    padding: 20px; /* Add some padding */
+    flex-direction: column;
+    /* Stack elements vertically on small screens */
+    align-items: center;
+    /* Center align items */
+    padding: 20px;
+    /* Add some padding */
 }
 
 .slider {
     position: relative;
-    width: 100%; /* Set the slider width to 100% */
-    max-width: 800px; /* Set a maximum width for larger screens */
+    width: 100%;
+    /* Set the slider width to 100% */
+    max-width: 800px;
+    /* Set a maximum width for larger screens */
     margin: auto;
     overflow: hidden;
 }
 
 .slide {
-    display: none; /* Hide all slides by default */
+    display: none;
+    /* Hide all slides by default */
 }
 
 .slide img {
-    width: 100%; /* Make the images responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Center the image horizontally */
+    width: 100%;
+    /* Make the images responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Center the image horizontally */
 }
 
 .navigation {
@@ -823,10 +877,12 @@ button {
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
-    padding: 10px 15px; /* Add horizontal padding */
+    padding: 10px 15px;
+    /* Add horizontal padding */
     font-size: 18px;
     border-radius: 5px;
-    margin: 0 10px; /* Adjust margin for smaller screens */
+    margin: 0 10px;
+    /* Adjust margin for smaller screens */
 }
 
 button:hover {
@@ -834,8 +890,10 @@ button:hover {
 }
 
 .our-story-text {
-    max-width: 800px; /* Set a maximum width for the text */
-    margin-top: 20px; /* Add some space between the slider and text */
+    max-width: 800px;
+    /* Set a maximum width for the text */
+    margin-top: 20px;
+    /* Add some space between the slider and text */
     text-align: center;
     margin-right: 50px;
 
@@ -843,17 +901,21 @@ button:hover {
 
 @media (min-width: 768px) {
     .our-story-section {
-        flex-direction: row; /* Change to row on larger screens */
-        justify-content: space-between; /* Space out slider and text */
+        flex-direction: row;
+        /* Change to row on larger screens */
+        justify-content: space-between;
+        /* Space out slider and text */
     }
 
     .slider {
-        max-width: 50%; /* Slider takes half the width on larger screens */
+        max-width: 50%;
+        /* Slider takes half the width on larger screens */
     }
 
     .our-story-text {
-        max-width: 40%; /* Text takes less width on larger screens */
-        margin-top: 0; /* Remove top margin */
+        max-width: 40%;
+        /* Text takes less width on larger screens */
+        margin-top: 0;
+        /* Remove top margin */
     }
 }
-

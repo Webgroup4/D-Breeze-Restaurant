@@ -28,9 +28,27 @@
                 <li class="logo"><a href="index.html"><img src="images/dbreezelogo.jpg.png" alt="logo"></a></li>
                 <input type="checkbox" id="check">
                 <span class="menu">
-                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li>
+                        <a href="aboutus.html">ABOUT US</a>
+                        <ul class="dropdown">
+                            <li><a href="aboutus.html#our story">Our Story</a></li>
+                            <li><a href="aboutus.html#values">Our Values</a></li>
+                            <li><a href="aboutus.html#chef">Our Chef</a></li>
+                            <li><a href="aboutus.html#culinary">Culinary Experience</a></li>
+                            <li><a href="aboutus.html#ambiance">Our Ambiance</a></li>
+                        </ul>
+                    </li>
                     <li><a href="dishlist.html">DISH LIST</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li>
+                        <a href="gallery.html">GALLERY</a>
+                        <ul class="dropdown">
+                            <li><a href="gallery.html#bestseller">Best Seller</a></li>
+                            <li><a href="gallery.html#Culinary Creations">Culinary Creations</a></li>
+                            <li><a href="gallery.html#ambiance">Ambiance & Interiors</a></li>
+                            <li><a href="gallery.html#Customer">Customer Features</a></li>
+                            <li><a href="gallery.html#video">Watch and Enjoy!</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">CONTACT US</a></li>
                     <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
 
@@ -140,46 +158,46 @@
     <script>
         var imageno = 1;
         displayimg(imageno);
-    
+
         function nextimg(n) {
             displayimg(imageno += n);
         }
-    
+
         function currentSlide(n) {
             displayimg(imageno = n);
         }
-    
+
         function displayimg(n) {
             var i;
             var image = document.getElementsByClassName("image");
             var dots = document.getElementsByClassName("dot");
-    
+
             if (n > image.length) {
                 imageno = 1;
             }
-    
+
             if (n < 1) {
                 imageno = image.length;
             }
-    
+
             for (i = 0; i < image.length; i++) {
                 image[i].style.display = "none";
             }
-    
+
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-    
+
             image[imageno - 1].style.display = "block";
             dots[imageno - 1].className += " active";
         }
-    
+
         // Auto change images every 3 seconds
-        setInterval(function() {
+        setInterval(function () {
             nextimg(1);
         }, 3000); // Change 3000 to any number of milliseconds you want for the interval
     </script>
-    
+
     <section>
 
 

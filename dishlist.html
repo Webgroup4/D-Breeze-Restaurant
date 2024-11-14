@@ -36,9 +36,27 @@
                 <li class="logo"><a href="index.html"><img src="images/dbreezelogo.jpg.png" alt="logo"></a></li>
                 <input type="checkbox" id="check">
                 <span class="menu">
-                    <li><a href="aboutus.html" >ABOUT US</a></li>
+                    <li>
+                        <a href="aboutus.html">ABOUT US</a>
+                        <ul class="dropdown">
+                            <li><a href="aboutus.html#our story">Our Story</a></li>
+                            <li><a href="aboutus.html#values">Our Values</a></li>
+                            <li><a href="aboutus.html#chef">Our Chef</a></li>
+                            <li><a href="aboutus.html#culinary">Culinary Experience</a></li>
+                            <li><a href="aboutus.html#ambiance">Our Ambiance</a></li>
+                        </ul>
+                    </li>
                     <li><a href="dishlist.html">DISH LIST</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li>
+                        <a href="gallery.html">GALLERY</a>
+                        <ul class="dropdown">
+                            <li><a href="gallery.html#bestseller">Best Seller</a></li>
+                            <li><a href="gallery.html#Culinary Creations">Culinary Creations</a></li>
+                            <li><a href="gallery.html#ambiance">Ambiance & Interiors</a></li>
+                            <li><a href="gallery.html#Customer">Customer Features</a></li>
+                            <li><a href="gallery.html#video">Watch and Enjoy!</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">CONTACT US</a></li>
                     <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
 
@@ -65,7 +83,9 @@
     <div class="container">
         <h1>Discover Our Culinary Delights</h1>
         <p class="intro-text">
-            Discover the essence of fresh, seasonal ingredients at D'Breeze. Our menu celebrates the bounty of nature, showcasing vibrant flavors and innovative techniques. Each dish is a testament to our commitment to quality and craftsmanship. Indulge your senses in a culinary journey that's both delicious and inspiring.
+            Discover the essence of fresh, seasonal ingredients at D'Breeze. Our menu celebrates the bounty of nature,
+            showcasing vibrant flavors and innovative techniques. Each dish is a testament to our commitment to quality
+            and craftsmanship. Indulge your senses in a culinary journey that's both delicious and inspiring.
         </p>
 
         <div class="header-section">
@@ -88,8 +108,8 @@
                     <input type="text" id="search-input" placeholder="Search for dishes...">
                 </div>
             </div>
-            
-            
+
+
         </div>
 
         <div class="category-section" id="appetizers">
@@ -398,7 +418,7 @@
                 <div class="dish-item">
                     <img src="DishlistIMG/Beef Burger.jpg" alt="Beef Burger">
                     <p>Beef Burger</p>
-                    <button class="preview-button" onclick="previewDish('Beef Burger')" >Preview</button>
+                    <button class="preview-button" onclick="previewDish('Beef Burger')">Preview</button>
                 </div>
                 <div class="dish-item">
                     <img src="DishlistIMG/cheese Burger.jpg" alt="Cheese Burger">
@@ -471,7 +491,7 @@
                     <p>Tuna Overload</p>
                     <button class="preview-button" onclick="previewDish('Tuna Overload')">Preview</button>
                 </div>
-                
+
             </div>
         </div>
 
@@ -482,9 +502,9 @@
                 <p id="preview-description" class="preview-description"></p>
             </div>
         </div>
-        
-        
-        
+
+
+
     </div>
 
     <section class="footer">
@@ -495,8 +515,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
                             class="fab fa-facebook"></i></a>
-                    <a href="https://www.messenger.com/t/100242331399704"><i
-                            class="fab fa-facebook-messenger"></i></a>
+                    <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
                     <a
                         href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
                             class="fab fa-instagram"></i></a>
