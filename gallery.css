@@ -13,7 +13,6 @@
 
 body {
     font-family: 'Asul', sans-serif;
-    /* Changed to Asul */
     background-color: yellow;
     color: #333;
     line-height: 1.6;
@@ -21,19 +20,12 @@ body {
 
 header {
     position: fixed;
-    /* Make header fixed */
     top: 0;
-    /* Position it at the top */
     left: 0;
-    /* Align to the left */
     width: 100%;
-    /* Full width */
     background-color: yellow;
-    /* Background color */
     z-index: 1000;
-    /* Ensure it stays on top of other content */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    /* Optional: Add shadow for depth */
 }
 
 .xContainer {
@@ -394,11 +386,8 @@ hr {
 .ambiance-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Three columns */
     gap: 20px;
-    /* Increased gap for better spacing */
     margin: 20px auto;
-    /* Center align with margin */
 }
 
 .ambiance h2 {
@@ -411,29 +400,20 @@ hr {
 
 .column {
     padding: 15px;
-    /* Increased padding for more space around images */
     text-align: center;
-    /* Center align text */
     position: relative;
-    /* To position the hover effect */
 }
 
 .column img {
     width: 100%;
-    /* Make images responsive */
     height: 400px;
-    /* Set a fixed height for all images */
     object-fit: cover;
-    /* Ensure images cover the entire area */
     border-radius: 8px;
-    /* Optional: rounded corners */
     transition: transform 0.3s ease;
-    /* Add a smooth transition for hover effect */
 }
 
 .column:hover img {
     transform: scale(1.1);
-    /* Slightly enlarge the image on hover */
 }
 
 .column h3 {
@@ -445,16 +425,102 @@ hr {
 @media (max-width: 768px) {
     .ambiance-images {
         grid-template-columns: repeat(2, 1fr);
-        /* Two columns on medium screens */
     }
 }
 
 @media (max-width: 480px) {
     .ambiance-images {
         grid-template-columns: 1fr;
-        /* Single column on mobile */
     }
 }
+
+ /* Modal */
+.modalimage {
+    margin: 5%;
+}
+
+section img {
+    margin: 2%;
+    border: 1px solid;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+section img:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 480px),(max-width: 780px), (max-width: 1030px), (max-width: 600px) {
+    .modal img{
+        width: auto;
+        height: 50%;
+        margin: auto;
+        position: fixed;
+    }
+}
+@media (max-width: 800px){
+    .modal img{
+        width: auto;
+        height: 50%;
+        margin: auto;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* end modal */
+
+
 
 /* Video Section */
 .video-section {
@@ -639,3 +705,4 @@ hr {
 .social-icons a:hover {
     opacity: 0.9;
 }
+

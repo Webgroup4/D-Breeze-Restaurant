@@ -14,8 +14,20 @@
 
 
 body {
-    font-family: "Poppins" sans-serif;
+    font-family: 'Asul', sans-serif;
     background-color: yellow;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: yellow;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .xContainer {
@@ -225,47 +237,60 @@ li:hover .dropdown {
 
 
 
-
-
 .privacy-container {
-    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 190px auto 60px auto;
+    
+}
+
+.privacy-box {
+    background: linear-gradient(135deg, #fff9c4, #fff3e0);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 50%; 
 }
 
 h2 {
-    color: #333;
+    color: orangered;
     margin-bottom: 15px;
-}
-
-h3 {
-    color: #555;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 p {
-    margin-bottom: 15px;
-}
-
-ul {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-li {
+    text-align: justify;
     margin-bottom: 5px;
+}
+
+a {
+    color: orangered;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 strong {
     font-weight: bold;
 }
 
-.active {
-    color: blue;
-    text-decoration: none;
+
+
+@media (max-width: 1030px) {
+    .privacy-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .privacy-box {
+        width: 100%; 
+        max-width: 650px;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -276,6 +301,8 @@ strong {
 
 
 
+
+  
 .footer {
     padding: 5px 0;
     background-color: yellow;
@@ -372,9 +399,6 @@ strong {
     text-align: center;
 }
 
-
-
-
 .list li a {
     color: black;
     transition: 0.3s;
@@ -384,3 +408,49 @@ strong {
     color: red;
     transform: scale(1.1);
 }
+
+/* Social Lines Section */
+.social-lines-section {
+    margin-top: 30px;
+    /* Add space between image and lines */
+    text-align: center;
+}
+
+.social-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.line {
+    width: 600px;
+    height: 2px;
+    background-color: #000;
+    /* Change the color to match your design */
+}
+
+@media(max-width: 1500px) {
+    .line {
+        display: none;
+    }
+
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.social-icons a:hover {
+    opacity: 0.9;
+}
+

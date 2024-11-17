@@ -97,50 +97,62 @@
         </div>
     </div>
 
-    <script>
 
+    <section class="footer">
+
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
+            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="privacy.html" class="active">Privacy note</a>
+            </li>
+            <li>
+                <a href="privacy.html" class="active">Terms of Use</a>
+            </li>
+        </ul>
+
+        <p class="copyright">
+            ©2024 D'BREEZE Restaurant. All right Reserved.
+        </p>
+
+    </section>
+
+    <script>
         var imageno = 1;
         displayimg(imageno);
-
         function nextimg(n) {
             displayimg(imageno += n)
         }
-
         function currentSlide(n) {
             displayimg(imageno = n)
         }
-
         function displayimg(n) {
             var i;
             var image = document.getElementsByClassName("image");
             var dots = document.getElementsByClassName("dot");
-
             if (n > image.length) {
                 imageno = 1;
             }
-
             if (n < 1) {
                 imageno = image.length;
             }
-
             for (i = 0; i < image.length; i++) {
                 image[i].style.display = "none";
             }
-
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-
             image[imageno - 1].style.display = "block";
             dots[imageno - 1].className += " active";
-
         }
-
     </script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <script>
         $(function () {
             $(".toggle").on("click", function () {
@@ -158,80 +170,36 @@
     <script>
         var imageno = 1;
         displayimg(imageno);
-
         function nextimg(n) {
             displayimg(imageno += n);
         }
-
         function currentSlide(n) {
             displayimg(imageno = n);
         }
-
         function displayimg(n) {
             var i;
             var image = document.getElementsByClassName("image");
             var dots = document.getElementsByClassName("dot");
-
             if (n > image.length) {
                 imageno = 1;
             }
-
             if (n < 1) {
                 imageno = image.length;
             }
-
             for (i = 0; i < image.length; i++) {
                 image[i].style.display = "none";
             }
-
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-
             image[imageno - 1].style.display = "block";
             dots[imageno - 1].className += " active";
         }
-
         // Auto change images every 3 seconds
         setInterval(function () {
             nextimg(1);
         }, 3000); // Change 3000 to any number of milliseconds you want for the interval
     </script>
-
-    <section>
-
-
-
-
-
-
-    </section>
-    <section class="footer">
-
-        <div class="social">
-            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
-            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
-                    class="fab fa-instagram"></i></a>
-        </div>
-        <ul class="list">
-            <li>
-                <a href="privacy.html" class="active">Privacy note</a>
-            </li>
-            <li>
-                <a href="terms.html" class="active">Terms of Use</a>
-            </li>
-        </ul>
-
-
-        <p class="copyright">
-            ©2024 D'Breeze Restaurant. All right Reserved.
-        </p>
-
-
-    </section>
-
-
 
 
 

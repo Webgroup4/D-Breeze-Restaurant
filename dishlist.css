@@ -20,12 +20,9 @@ body {
 
 header {
     position: fixed;
-    /* Make header fixed */
     top: 0;
-    /* Position it at the top */
     left: 0;
     width: 100%;
-    /* Full width */
     background-color: yellow;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
