@@ -28,27 +28,9 @@
                 <li class="logo"><a href="index.html"><img src="images/dbreezelogo.jpg.png" alt="logo"></a></li>
                 <input type="checkbox" id="check">
                 <span class="menu">
-                    <li>
-                        <a href="aboutus.html">ABOUT US</a>
-                        <ul class="dropdown">
-                            <li><a href="aboutus.html#our story">Our Story</a></li>
-                            <li><a href="aboutus.html#values">Our Values</a></li>
-                            <li><a href="aboutus.html#chef">Our Chef</a></li>
-                            <li><a href="aboutus.html#culinary">Culinary Experience</a></li>
-                            <li><a href="aboutus.html#ambiance">Our Ambiance</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
                     <li><a href="dishlist.html">DISH LIST</a></li>
-                    <li>
-                        <a href="gallery.html">GALLERY</a>
-                        <ul class="dropdown">
-                            <li><a href="gallery.html#bestseller">Best Seller</a></li>
-                            <li><a href="gallery.html#Culinary Creations">Culinary Creations</a></li>
-                            <li><a href="gallery.html#ambiance">Ambiance & Interiors</a></li>
-                            <li><a href="gallery.html#Customer">Customer Features</a></li>
-                            <li><a href="gallery.html#video">Watch and Enjoy!</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="contact.html">CONTACT US</a></li>
                     <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
 
@@ -97,62 +79,50 @@
         </div>
     </div>
 
-
-    <section class="footer">
-
-        <div class="social">
-            <a href="https://www.facebook.com/profile.php?id=100063930428062"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.messenger.com/t/100242331399704"><i class="fab fa-facebook-messenger"></i></a>
-            <a href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
-                    class="fab fa-instagram"></i></a>
-        </div>
-        <ul class="list">
-            <li>
-                <a href="privacy.html" class="active">Privacy note</a>
-            </li>
-            <li>
-                <a href="privacy.html" class="active">Terms of Use</a>
-            </li>
-        </ul>
-
-        <p class="copyright">
-            ©2024 D'BREEZE Restaurant. All right Reserved.
-        </p>
-
-    </section>
-
     <script>
+
         var imageno = 1;
         displayimg(imageno);
+
         function nextimg(n) {
             displayimg(imageno += n)
         }
+
         function currentSlide(n) {
             displayimg(imageno = n)
         }
+
         function displayimg(n) {
             var i;
             var image = document.getElementsByClassName("image");
             var dots = document.getElementsByClassName("dot");
+
             if (n > image.length) {
                 imageno = 1;
             }
+
             if (n < 1) {
                 imageno = image.length;
             }
+
             for (i = 0; i < image.length; i++) {
                 image[i].style.display = "none";
             }
+
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
+
             image[imageno - 1].style.display = "block";
             dots[imageno - 1].className += " active";
+
         }
+
     </script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script>
         $(function () {
             $(".toggle").on("click", function () {
@@ -169,32 +139,48 @@
     </script>
     <script>
         var imageno = 1;
-        displayimg(imageno);
-        function nextimg(n) {
-            displayimg(imageno += n);
-        }
-        function currentSlide(n) {
-            displayimg(imageno = n);
-        }
-        function displayimg(n) {
-            var i;
-            var image = document.getElementsByClassName("image");
-            var dots = document.getElementsByClassName("dot");
-            if (n > image.length) {
-                imageno = 1;
-            }
-            if (n < 1) {
-                imageno = image.length;
-            }
-            for (i = 0; i < image.length; i++) {
-                image[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            image[imageno - 1].style.display = "block";
-            dots[imageno - 1].className += " active";
-        }
+displayimg(imageno);
+
+function nextimg(n) {
+    displayimg(imageno += n);
+}
+
+function currentSlide(n) {
+    displayimg(imageno = n);
+}
+
+function displayimg(n) {
+    var i;
+    var image = document.getElementsByClassName("image");
+    var dots = document.getElementsByClassName("dot");
+
+    if (n > image.length) {
+        imageno = 1;
+    }
+
+    if (n < 1) {
+        imageno = image.length;
+    }
+
+    for (i = 0; i < image.length; i++) {
+        image[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    image[imageno - 1].style.display = "block";
+    dots[imageno - 1].className += " active";
+}
+
+// Auto change images every 3 seconds
+setInterval(function () {
+    nextimg(1);
+}, 3000); // Change 3000 to any number of milliseconds you want for the interval
+
+
+
         // Auto change images every 3 seconds
         setInterval(function () {
             nextimg(1);
@@ -202,11 +188,40 @@
     </script>
 
 
+    <section class="footer">
+
+        <div class="social-lines-section">
+            <div class="social-lines">
+                <div class="line"></div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100063930428062"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.messenger.com/t/100242331399704"><i
+                            class="fab fa-facebook-messenger"></i></a>
+                    <a
+                        href="https://www.instagram.com/explore/locations/100242331399704/dbreeze-restaurant-roxas-avenue/"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="privacy.html" class="active">Privacy note</a>
+            </li>
+            <li>
+                <a href="terms.html" class="active">Terms of Use</a>
+            </li>
+        </ul>
 
 
+        <p class="copyright">
+            ©2024 D'Breeze Restaurant. All right Reserved.
+        </p>
 
+
+    </section>
     <script src="app.js"></script>
-
 </body>
 
 </html>
