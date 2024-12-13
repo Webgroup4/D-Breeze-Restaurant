@@ -15,7 +15,7 @@ const imageMap = {
     "Kebab Dajaj": "DishlistIMG/Kebab Dajaj.jpg",
     "Tikka": "DishlistIMG/Tikka.jpg",
     "Shish Tawouk": "DishlistIMG/Shish Tawouk.jpg",
-    "Mix Grilled": "DishlistIMG/Mix Grilled.jpg",
+    "Mix Grilled": "images/bestseller2.jpg",
     "Mix Grilled Big Plate": "DishlistIMG/Mix Grilled Big Plate.jpg",
     "Chicken Salona": "DishlistIMG/Chicken Salona.jpg",
     "Chicken Curry": "DishlistIMG/Chicken Curry.jpg",
@@ -26,7 +26,7 @@ const imageMap = {
      // Filipino Meals
     "Chicken w/ Spaghetti": "DishlistIMG/Chicken w Spaghetti.jpg",
     "Katsu Curry": "DishlistIMG/Katsu Curry.jpg",
-    "1pc. Chicken": "DishlistIMG/1pc. Chicken.jp",
+    "1pc. Chicken": "DishlistIMG/1pc. Chicken.jpg",
     "2pcs. Fried Chicken": "DishlistIMG/2pcs. Fried Chicken.jpg",
     "Burger Steak": "DishlistIMG/Burger Steak.jpg",
     "Sizzling Bulalo": "DishlistIMG/Sizzling Bulalo.jpg",
