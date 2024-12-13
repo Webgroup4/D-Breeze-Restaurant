@@ -26,7 +26,7 @@ const imageMap = {
      // Filipino Meals
     "Chicken w/ Spaghetti": "DishlistIMG/Chicken w Spaghetti.jpg",
     "Katsu Curry": "DishlistIMG/Katsu Curry.jpg",
-    "1pc. Chicken": "DishlistIMG/1pc. Chicken.jpg",
+    "1pc. Chicken": "DishlistIMG/1Chicken.jpg",
     "2pcs. Fried Chicken": "DishlistIMG/2pcs. Fried Chicken.jpg",
     "Burger Steak": "DishlistIMG/Burger Steak.jpg",
     "Sizzling Bulalo": "DishlistIMG/Sizzling Bulalo.jpg",
