@@ -8,7 +8,6 @@
     box-sizing: border-box;
     font-family: Asul;
     color: oklch(from color l c h);
-
 }
 
 
@@ -113,7 +112,14 @@ header {
 #check {
     display: none;
 }
-
+.heading{
+    font-family: poppins;
+    text-align: left;
+    font-weight: bolder;
+    margin: auto;
+    font-size: 40px;
+    color: rgb(255, 111, 0);
+}
 @media(max-width: 610px) {
     .menu {
         flex-direction: column;
@@ -145,6 +151,11 @@ header {
 
     #check:checked~.menu {
         right: 0;
+    }
+    .heading{
+        font-size: 25px;
+        margin-right: auto;
+        margin-left: 0%;
     }
 }
 
@@ -301,10 +312,8 @@ strong {
 
 
 
-
-  
 .footer {
-    padding: 5px 0;
+    padding: 3px 0;
     background-color: yellow;
 }
 
@@ -351,7 +360,12 @@ strong {
 
 }
 
+@media(max-width: 1500px) {
+    .line {
+        display: none;
+    }
 
+}
 
 
 
@@ -391,22 +405,15 @@ strong {
 .footer ul li {
     display: inline-block;
     padding: 0 50px;
+    text-decoration: none;
 }
-
+.footer ul li a:hover {
+    text-decoration: none;
+}
 .footer .copyright {
     margin-top: 15px;
     font-size: 13px;
     text-align: center;
-}
-
-.list li a {
-    color: black;
-    transition: 0.3s;
-}
-
-.list li a:hover {
-    color: red;
-    transform: scale(1.1);
 }
 
 /* Social Lines Section */
@@ -423,18 +430,21 @@ strong {
     gap: 20px;
 }
 
+.list li a {
+    color: black;
+    transition: 0.3s;
+}
+
+.list li a:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
 .line {
     width: 600px;
     height: 2px;
     background-color: #000;
     /* Change the color to match your design */
-}
-
-@media(max-width: 1500px) {
-    .line {
-        display: none;
-    }
-
 }
 
 .social-icons a {
@@ -453,4 +463,3 @@ strong {
 .social-icons a:hover {
     opacity: 0.9;
 }
-

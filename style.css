@@ -14,7 +14,6 @@
 
 
 body {
-    font-family: "Poppins" sans-serif;
     background-color: yellow;
 }
 
@@ -101,7 +100,13 @@ body {
 #check {
     display: none;
 }
-
+.heading{
+    text-align: left;
+    font-weight: bolder;
+    margin: auto;
+    font-size: 40px;
+    color: rgb(255, 111, 0);
+}
 @media(max-width: 610px) {
     .menu {
         flex-direction: column;
@@ -117,7 +122,6 @@ body {
         transition: all 0.2s ease-in-out;
         gap: 0px;
     }
-
     .menu li {
         margin-top: 40px;
     }
@@ -133,6 +137,11 @@ body {
 
     #check:checked~.menu {
         right: 0;
+    }
+    .heading{
+        font-size: 30px;
+        margin-right: auto;
+        margin-left: 0%;
     }
 }
 
@@ -156,6 +165,11 @@ body {
     .socialIcons {
         display: flex;
         color: orangered;
+    }
+    .heading{
+        font-size: 25px;
+        margin-right: auto;
+        margin-left: 0%;
     }
 }
 

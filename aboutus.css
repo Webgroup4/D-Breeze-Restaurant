@@ -112,7 +112,13 @@ header {
 #check {
     display: none;
 }
-
+.heading{
+    text-align: left;
+    font-weight: bolder;
+    margin: auto;
+    font-size: 40px;
+    color: rgb(255, 111, 0);
+}
 @media(max-width: 610px) {
     .menu {
         flex-direction: column;
@@ -144,6 +150,11 @@ header {
 
     #check:checked~.menu {
         right: 0;
+    }
+    .heading{
+        font-size: 25px;
+        margin-right: auto;
+        margin-left: 0%;
     }
 }
 
