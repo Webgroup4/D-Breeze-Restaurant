@@ -41,7 +41,7 @@ const imageMap = {
     "Strawberry Shakes": "DishlistIMG/Strawberry Shakes.jpg",
     "Blackberry Shakes": "DishlistIMG/Blackberry Shakes.jpg",
     "Raspberry": "DishlistIMG/Raspberry.jpg",
-    "Mulberry Shakes": "DishlistIMG/Mulberry Shakes.jp",
+    "Mulberry Shakes": "DishlistIMG/Mulberry Shakes.jpg",
     "Lemon and Cucumber": "DishlistIMG/Lemon and Cucumber.jpg",
     "Mango": "DishlistIMG/Mango.jpg",
     "Banana": "DishlistIMG/Banana.jpg",
