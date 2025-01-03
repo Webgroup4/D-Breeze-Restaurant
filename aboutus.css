@@ -118,7 +118,7 @@ header {
     display: none;
 }
 
-@media(max-width: 610px), (max-width: 1310px) {
+@media(max-width: 610px) {
     .menu {
         flex-direction: column;
         align-items: center;

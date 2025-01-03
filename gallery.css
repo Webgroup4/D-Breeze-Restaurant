@@ -121,7 +121,7 @@ header {
     display: none;
 }
 
-@media(max-width: 610px), (max-width: 1310px) {
+@media(max-width: 610px) {
     .menu {
         flex-direction: column;
         align-items: center;
@@ -518,23 +518,17 @@ section img:hover {
 @media (max-width: 480px),
 (max-width: 780px),
 (max-width: 1030px),
-(max-width: 600px) {
+(max-width: 768px),
+(max-width: 800px)
+{
     .modal img {
-        width: auto;
+        width: 400px;
         height: 50%;
-        margin: auto;
-
+        margin-left: -50px;
+        padding: auto;
     }
 }
 
-@media (max-width: 800px), (max-width: 768px) {
-    .modal img {
-        width: auto;
-        height: 50%;
-        margin: auto;
-        padding: auto
-    }
-}
 
 .modal {
     display: none;
