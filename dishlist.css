@@ -123,7 +123,7 @@ header {
 #check {
     display: none;
 }
-@media(max-width: 610px) {
+@media(max-width: 610px) , (max-width: 1310px) {
     .menu {
         flex-direction: column;
         align-items: center;
@@ -211,12 +211,12 @@ header {
     display: none;
     /* Hide the dropdown by default */
     position: absolute;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color:rgba(213, 213, 15, 0.899);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 20px;
     margin-left: -50px;
-
+    backdrop-filter: blur(3px);
 }
 @media (max-width: 768px) {
     .dropdown ul li a {
@@ -599,7 +599,7 @@ h1 {
 
 .footer {
     padding: 5px 0;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color:rgba(213, 213, 15, 0.899);
     box-shadow: 0 2px 10px rgba(3, 3, 3, 0.3);
 }
 
@@ -689,11 +689,13 @@ h1 {
 }
 
 .footer ul li {
+    background-color:rgba(213, 213, 15, 0.899);
     display: inline-block;
     padding: 0 50px;
 }
 
 .footer .copyright {
+    
     margin-top: 15px;
     font-size: 13px;
     text-align: center;
