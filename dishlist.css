@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Great+Vibes&family=Milonga&family=Mirza:wght@400;500;600;700&family=Protest+Revolution&family=Ribeye+Marrow&family=Spicy+Rice&display=swap');
 
 * {
     padding: 0;
@@ -54,12 +53,7 @@ header {
     align-items: center;
     gap: 10px;
 }
-.restaurant-name {
-    font-family: "Milonga", serif;
-    color: rgb(221, 70, 15);
-    font-size: 35px;
-    font-weight: 550;
-}
+
 
 .logo img {
     width: 100px;
@@ -158,9 +152,7 @@ header {
     #check:checked~.menu {
         right: 0;
     }
-    .restaurant-name{
-        font-size: 20px;
-    }
+
 }
 
 
@@ -184,9 +176,7 @@ header {
         display: flex;
         color: orangered;
     }
-    .restaurant-name{
-        font-size: 20px;
-    }
+
 }
 
 @media(max-width: 1100px) {
@@ -194,9 +184,7 @@ header {
         display: flex;
         color: orangered;
     }
-    .restaurant-name{
-        font-size: 20px;
-    }
+
 }
 
 .menu .active {
@@ -229,9 +217,7 @@ header {
     .dropdown li a{
         display: none;
     }
-    .restaurant-name{
-        display: none;
-    }
+
     li:hover .dropdown {
             opacity: 0.01;
     }
