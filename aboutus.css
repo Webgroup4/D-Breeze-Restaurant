@@ -218,9 +218,9 @@ header {
 
 }
 @media (max-width: 768px) {
-    .dropdown {
-        display: none;
-        background-color: none;
+    .dropdown ul li a {
+        display: hidden;
+        background-color: hidden;
         box-shadow: none;
     }
     .dropdown li a{
@@ -229,6 +229,10 @@ header {
     .restaurant-name{
         font-size: 20px;
     }
+    li:hover .dropdown {
+            opacity: 0.01;
+    }
+
 }
 
 .dropdown li {

@@ -212,25 +212,21 @@ header {
 
 }
 @media (max-width: 768px) {
-    .dropdown {
-        display: none;
-         background-color:rgba(235, 235, 15, 0.899);
+    .dropdown ul li a {
+        display: hidden;
+        background-color: hidden;
+        box-shadow: none;
     }
     .dropdown li a{
         display: none;
-         background-color:rgba(235, 235, 15, 0.899);
-    }
-    header .dropdown li a{
-        display: none;
-         background-color:rgba(235, 235, 15, 0.899);
-    }
-    li:hover .dropdown {
-        display: none;
-        background-color:rgba(235, 235, 15, 0.899);;
     }
     .restaurant-name{
         font-size: 20px;
     }
+    li:hover .dropdown {
+            opacity: 0.01;
+    }
+
 }
 
 
@@ -292,9 +288,9 @@ li:hover .dropdown {
 }
 
 
-h1 {
+.contact-container h1 {
     margin-bottom: 15px;
-    color: orangered;
+    color: red;
 }
 p {
     margin-bottom: 10px;
@@ -450,16 +446,17 @@ h3 {
 }
 
 
-.location-section h3 {
+.location-section h2 {
     margin-bottom: 15px;
     width: 90%;
+    color: red;
 }
 
 
 /* feedback */
 h1 {
     text-align: center;
-    color: orangered;
+    color: red;
 }
 
 .feedbackform {
@@ -497,7 +494,10 @@ h1 {
 
 }
 
-
+.feedbackform a:hover {
+    background-color: #d76d17;
+    /* Darker shade on hover */
+}
 /* Feedback display section */
 .feedback-container {
     border-radius: 10px;

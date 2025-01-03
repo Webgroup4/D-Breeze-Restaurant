@@ -134,7 +134,7 @@ header {
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color:rgba(235, 235, 15, 0.899);
+        background-color:rgba(223, 223, 33, 0.996);
         transition: all 0.2s ease-in-out;
         gap: 0px;
     }
@@ -219,9 +219,9 @@ header {
 
 }
 @media (max-width: 768px) {
-    .dropdown {
-        display: none;
-        background-color: none;
+    .dropdown ul li a {
+        display: hidden;
+        background-color: hidden;
         box-shadow: none;
     }
     .dropdown li a{
@@ -230,8 +230,11 @@ header {
     .restaurant-name{
         font-size: 20px;
     }
-}
+    li:hover .dropdown {
+            opacity: 0.01;
+    }
 
+}
 
 .dropdown li {
     text-align: center;

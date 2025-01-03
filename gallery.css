@@ -13,7 +13,7 @@
 
 body {
     font-family: 'Asul', sans-serif;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(235, 235, 15, 0.899);
     color: #333;
     line-height: 1.6;
 }
@@ -23,7 +23,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(235, 235, 15, 0.899);
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -43,19 +43,22 @@ header {
     list-style: none;
     position: relative;
     padding: 0px 20px;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(235, 235, 15, 0.899);
 
 }
+
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .restaurant-name {
     color: orangered;
     font-size: 45px;
     font-weight: bold;
 }
+
 .logo img {
     width: 100px;
     height: 100px;
@@ -132,7 +135,7 @@ header {
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color:rgba(235, 235, 15, 0.899);
+        background-color: rgba(223, 223, 33, 0.996);
         transition: all 0.2s ease-in-out;
         gap: 0px;
     }
@@ -167,7 +170,7 @@ header {
     padding: 15px;
     margin: 10px;
     border-radius: 50%;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(235, 235, 15, 0.899);
     color: orangered;
 }
 
@@ -201,25 +204,33 @@ header {
     display: none;
     /* Hide the dropdown by default */
     position: absolute;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(235, 235, 15, 0.899);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 20px;
     margin-left: -50px;
 
 }
+
 @media (max-width: 768px) {
-    .dropdown {
-        display: none;
-        background-color: none;
+    .dropdown ul li a {
+        display: hidden;
+        background-color: hidden;
         box-shadow: none;
     }
-    .dropdown li a{
+
+    .dropdown li a {
         display: none;
     }
-     .restaurant-name{
+
+    .restaurant-name {
         font-size: 20px;
     }
+
+    li:hover .dropdown {
+        opacity: 0.01;
+    }
+
 }
 
 
@@ -281,7 +292,7 @@ hr {
     font-size: 2em;
     text-align: center;
     margin-bottom: 15px;
-    color: #f57f17;
+    color: red;
 
 }
 
@@ -312,55 +323,67 @@ hr {
 .column h3 {
     font-size: 1.5em;
     margin: 15px 0 10px;
-    color: #f57f17;
+    color: red;
     /* Heading color */
 }
 
 @media (max-width: 768px) {
     .best-seller-images {
         grid-template-columns: repeat(3 fr);
-       
+
     }
+
     #bestseller {
-        margin-top:  100px;
+        margin-top: 100px;
     }
+
     .best-seller h2 {
-        margin-top:  80px;
+        margin-top: 80px;
     }
 }
+
 @media (max-width: 968px) {
     .best-seller-images {
         grid-template-columns: repeat(3 fr);
-       
+
     }
+
     #bestseller {
-        margin-top:  100px;
+        margin-top: 100px;
     }
+
     .best-seller h2 {
-        margin-top:  80px;
+        margin-top: 80px;
     }
 }
-@media (max-width: 480px), (max-width: 768px) {
+
+@media (max-width: 480px),
+(max-width: 768px) {
     .best-seller-images {
         grid-template-columns: 1fr;
     }
+
     #bestseller {
-        margin-top:  100px;
+        margin-top: 100px;
     }
+
     .best-seller h2 {
-        margin-top:  80px;
+        margin-top: 80px;
     }
 }
+
 @media (max-width: 768px) {
     .best-seller-images {
         grid-template-columns: 1fr;
         height: 20%;
     }
+
     #bestseller {
-        margin-top:  100px;
+        margin-top: 100px;
     }
+
     .best-seller h2 {
-        margin-top:  80px;
+        margin-top: 80px;
     }
 }
 
@@ -393,7 +416,7 @@ hr {
 .soup-info h3 {
     font-size: 1.5em;
     margin: 15px 0 10px;
-    color: #f57f17;
+    color: red;
     /* Heading color */
 }
 
@@ -445,7 +468,7 @@ hr {
     font-size: 2em;
     text-align: center;
     margin-bottom: 25px;
-    color: #f57f17;
+    color: red;
 }
 
 .column {
@@ -469,7 +492,7 @@ hr {
 .column h3 {
     font-size: 1.5em;
     margin: 15px 0 10px;
-    color: #f57f17;
+    color: red;
 }
 
 @media (max-width: 768px) {
@@ -484,7 +507,7 @@ hr {
     }
 }
 
- /* Modal */
+/* Modal */
 .modalimage {
     margin: 5%;
 }
@@ -499,21 +522,28 @@ section img {
 section img:hover {
     transform: scale(1.1);
 }
-@media (max-width: 480px),(max-width: 780px), (max-width: 1030px), (max-width: 600px) {
-    .modal img{
+
+@media (max-width: 480px),
+(max-width: 780px),
+(max-width: 1030px),
+(max-width: 600px) {
+    .modal img {
         width: auto;
         height: 50%;
         margin: auto;
-       
+
     }
 }
-@media (max-width: 800px){
-    .modal img{
+
+@media (max-width: 800px), (max-width: 768px) {
+    .modal img {
         width: auto;
         height: 50%;
         margin: auto;
+        padding: auto
     }
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -529,7 +559,7 @@ section img:hover {
 .modal-content {
     margin: auto;
     display: block;
-    width: 50%;
+    width: auto;
     height: 100%;
     border-radius: 20px;
 }
@@ -567,6 +597,7 @@ section img:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
 /* end modal */
 
 
@@ -583,7 +614,7 @@ section img:hover {
     font-size: 1.5em;
     margin: 20px 0 15px;
     /* Increased margins for better spacing */
-    color: #f57f17;
+    color: red;
 }
 
 .video-container {
@@ -607,7 +638,7 @@ section img:hover {
 
 .footer {
     padding: 5px 0;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(235, 235, 15, 0.899);
     box-shadow: 0 2px 10px rgba(3, 3, 3, 0.3);
 }
 
@@ -764,7 +795,8 @@ section img:hover {
 /* Initial state for the fade-in effect */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px); /* Optional: Slightly move the element down */
+    transform: translateY(20px);
+    /* Optional: Slightly move the element down */
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
