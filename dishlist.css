@@ -72,7 +72,6 @@ header {
 .menu li a {
     display: inline-block;
     text-decoration: none;
-    /* Ensure no underline on all links */
     color: orangered;
     text-align: center;
     transition: 0.15s ease-in-out;
@@ -228,18 +227,15 @@ header {
     text-align: center;
     padding: 5px;
     border-bottom: 1px solid #ddd;
-    /* Add a subtle border */
 }
 
 .dropdown li:last-child {
     border-bottom: none;
-    /* Remove border from the last item */
 }
 
 .dropdown li a {
     color: orangered;
     text-decoration: none;
-    /* Remove default link underline */
 }
 
 /* Show the dropdown on hover */
@@ -264,7 +260,6 @@ main {
 
 .container {
     max-width: 1400px;
-    /* Increase the container width */
     margin: 20px auto;
     padding: 20px;
     background-color:rgba(248, 205, 111, 0.899);
@@ -280,25 +275,17 @@ main {
 h1 {
     text-align: center;
     font-size: 2.5em;
-    /* Set font size to 2.5em */
     color: orange;
-    /* Change color to orange */
 }
 
 
 .intro-text {
     text-align: justify;
-    /* Justify text alignment */
     font-size: 20px;
-    /* Set font size */
     line-height: 1.6;
-    /* Add line height for readability */
     text-indent: 10%;
-    /* Indent the first line */
     margin: 10px 0 20px;
-    /* Add space above and below */
     padding: 5px 0;
-    /* Subtle padding for extra breathing room */
     color: #333;
     font-family: asul;
 }
@@ -314,7 +301,6 @@ h1 {
 
 .categories {
     position: relative;
-    /* Enable absolute positioning for the icon */
     width: 20%;
 }
 
@@ -328,17 +314,13 @@ h1 {
     padding: 8px;
     width: 100%;
     border-radius: 12px;
-    /* Add rounded corners with a radius */
     border: 2px solid #ccc;
-    /* Add a solid border */
     box-shadow: orangered;
-    /* Optional shadow */
 }
 
 
 .search {
     position: relative;
-    /* Enable absolute positioning for the icon */
 }
 
 .search h3 {
@@ -348,15 +330,10 @@ h1 {
 
 .search input {
     padding: 10px;
-    /* Decrease padding for a shorter height */
     width: 100%;
-    /* Make it full width within the parent */
     border-radius: 15px;
-    /* Slightly rounded corners for an oblong shape */
     border: 1px solid orange;
-    /* Optional: add a border */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Optional: add a shadow */
     margin-left: -30px;
     padding-right: 30px;
 }
@@ -364,33 +341,29 @@ h1 {
 
 .search-container {
     position: relative;
-    /* Enables absolute positioning for the icon */
 }
 
 .search-icon {
     position: absolute;
     top: 50%;
     right: 10px;
-    /* Position on the right */
     transform: translateY(-50%);
-    /* Center vertically */
     color: orange;
-    /* Change icon color to orange */
     pointer-events: none;
-    /* Prevents icon from blocking input clicks */
+    background-color: white;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid orange;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-icon {
     position: absolute;
     top: 50%;
     right: -5px;
-    /* Adjusted to be slightly further right */
     transform: translateY(-50%);
-    /* Center vertically */
     color: orange;
-    /* Icon color remains orange */
     pointer-events: none;
-    /* Prevents icon from blocking input clicks */
 }
 
 
@@ -436,11 +409,8 @@ h1 {
 
 .dish-item img {
     width: 100%;
-    /* Make the image take full width of its container */
     height: auto;
-    /* Let the height adjust proportionally to the width */
     max-height: 300px;
-    /* Set a max height to make images bigger */
     object-fit: cover;
     /* Ensure image covers the container without distortion */
     border-radius: 8px;
@@ -457,7 +427,6 @@ h1 {
 
 .dish-item p {
     margin: 5px 0;
-    /* Space between button and text */
 }
 .price{
   color: red;
@@ -465,8 +434,6 @@ h1 {
 }
 .dish-item .preview-button {
     margin-bottom: 5px;
-    /* Space below button */
-    /* Additional styles for the button can be added here */
 }
 
 
@@ -474,7 +441,6 @@ h1 {
 
 .dish-item img {
     width: 100%;
-    /* Make the image take full width of its container */
     height: 100%;
     /* Ensure the image takes up the full height of its container */
     max-height: 250px;
@@ -560,7 +526,7 @@ h1 {
 /* Close Button Styles */
 .close-button {
     font-size: 50px;
-    color: rgb(255, 247, 0);
+    color: yellow;
     cursor: pointer;
     position: absolute;
     top: 15px;
