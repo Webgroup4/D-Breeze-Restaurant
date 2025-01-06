@@ -130,7 +130,7 @@ header {
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color: rgba(233, 233, 27, 0.899);
+        background-color: rgba(223, 223, 28, 0.944);
         transition: all 0.2s ease-in-out;
         gap: 0px;
     }
