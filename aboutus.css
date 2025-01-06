@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Asul', sans-serif;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(233, 233, 27, 0.899);
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -24,7 +24,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(233, 233, 27, 0.899);
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -44,7 +44,7 @@ header {
     list-style: none;
     position: relative;
     padding: 0px 20px;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(233, 233, 27, 0.899);
 
 }
 .logo {
@@ -163,7 +163,7 @@ header {
     padding: 15px;
     margin: 10px;
     border-radius: 50%;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(233, 233, 27, 0.899);
     color: orangered;
 }
 
@@ -197,7 +197,7 @@ header {
 .dropdown {
     display: none;
     position: absolute;
-    background-color: rgba(237, 237, 26, 0.871);
+    background-color: rgba(233, 233, 27, 0.899);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 20px;
@@ -526,7 +526,7 @@ hr {
 
 
 
-/* Blurred Image Section */
+
 .blurred-image-section {
     position: relative;
     padding: 40px 20px;
@@ -539,10 +539,10 @@ hr {
     height: auto;
     border-radius: 8px;
     display: block;
-    /* Remove extra space below the image */
+
 }
 
-/* Text inside the image with black overlay */
+
 .blurred-text1 {
     position: absolute;
     top: 50%;
@@ -550,7 +550,7 @@ hr {
     transform: translate(-50%, -50%);
     color: #f9f2f2;
     background-color: rgba(0, 0, 0, 0.6);
-    /* Slightly lighter black overlay */
+
     border-radius: 20px;
     padding: 20px;
     font-size: 1.5em;
@@ -558,12 +558,12 @@ hr {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 100;
     width: 90%;
-    /* Make text width responsive */
+
 }
 
 .blurred-text1 h2 {
     font-size: 2.5em;
-    /* Slightly larger heading */
+
     margin-bottom: 15px;
 }
 
@@ -574,7 +574,7 @@ hr {
     text-indent: 60px;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px),(max-width: 900px) {
     .blurred-text1 {
         font-size: 1.2em;
@@ -627,7 +627,7 @@ hr {
 
 .footer {
     padding: 5px 0;
-    background-color:rgba(235, 235, 15, 0.899);
+    background-color: rgba(233, 233, 27, 0.899);
     box-shadow: 0 2px 10px rgba(3, 3, 3, 0.3);
 }
 
