@@ -340,6 +340,8 @@ strong {
     box-shadow: 0 2px 10px rgba(3, 3, 3, 0.3);
 }
 
+
+
 .footer .social {
     text-align: center;
     padding-bottom: 10px;
@@ -416,6 +418,7 @@ strong {
 .list li a:hover {
     color: red;
     transform: scale(1.1);
+    text-decoration: none;
 }
 
 .footer ul {
@@ -443,7 +446,6 @@ strong {
 /* Social Lines Section */
 .social-lines-section {
     margin-top: 30px;
-    /* Add space between image and lines */
     text-align: center;
 }
 
