@@ -129,7 +129,7 @@ header {
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color: rgba(223, 223, 28, 0.944);
+        background-color:rgba(223, 223, 33, 0.996);
         transition: all 0.2s ease-in-out;
         gap: 0px;
     }
@@ -726,8 +726,9 @@ hr {
 
 .footer .copyright {
     margin-top: 15px;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
+    color: rgb(66, 63, 63);
 }
 
 /* Social Lines Section */
