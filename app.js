@@ -93,7 +93,7 @@ function displayimg(n) {
 // Auto change images every 3 seconds
 setInterval(function () {
     nextimg(1);
-}, 3000); 
+}, 6000); 
 
 
 
