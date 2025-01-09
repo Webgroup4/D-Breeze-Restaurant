@@ -93,4 +93,9 @@ function displayimg(n) {
 // Auto change images every 3 seconds
 setInterval(function () {
     nextimg(1);
-}, 3000); // Change 3000 to any number of milliseconds you want for the interval
+}, 3000); 
+
+
+
+
+
